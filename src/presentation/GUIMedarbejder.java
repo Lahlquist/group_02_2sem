@@ -40,6 +40,8 @@ public class GUIMedarbejder extends javax.swing.JFrame
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jTextField5 = new javax.swing.JTextField();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -166,7 +168,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonGetGuestList)
                     .addComponent(jLabelInfoOversigt))
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addContainerGap(146, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Gæst Oversigt", jPanel1);
@@ -175,7 +177,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1178, Short.MAX_VALUE)
+            .addGap(0, 1186, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -209,6 +211,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
 
         jLabel8.setText("Check Ud:");
 
+        buttonGroup1.add(SingleRumBtn);
         SingleRumBtn.setText("Single Rum");
         SingleRumBtn.addActionListener(new java.awt.event.ActionListener()
         {
@@ -218,6 +221,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
             }
         });
 
+        buttonGroup1.add(FamilieRumBtn);
         FamilieRumBtn.setText("Familie Rum (5 pers)");
         FamilieRumBtn.addActionListener(new java.awt.event.ActionListener()
         {
@@ -227,6 +231,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
             }
         });
 
+        buttonGroup1.add(DobbeltRumBtn);
         DobbeltRumBtn.setText("Dobbelt Rum");
         DobbeltRumBtn.addActionListener(new java.awt.event.ActionListener()
         {
@@ -335,7 +340,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGap(78, 78, 78)
                                 .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 298, Short.MAX_VALUE)
                                 .addComponent(jLabel14)
                                 .addGap(18, 18, 18)
                                 .addComponent(jButtonCheckudsigt)
@@ -358,7 +363,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
                     .addComponent(SingleRumBtn)
                     .addComponent(FamilieRumBtn)
                     .addComponent(DobbeltRumBtn))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 183, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextFieldFornavn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)
@@ -452,7 +457,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
                 .addComponent(jButtonHentOversigt)
                 .addGap(42, 42, 42))
         );
@@ -604,6 +609,8 @@ public class GUIMedarbejder extends javax.swing.JFrame
     private javax.swing.JRadioButton FamilieRumBtn;
     private javax.swing.JTable GaesteListen;
     private javax.swing.JRadioButton SingleRumBtn;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JButton jButtonBekræftBooking;
     private javax.swing.JButton jButtonCheckudsigt;
     private javax.swing.JButton jButtonGetGuestList;
