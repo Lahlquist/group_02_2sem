@@ -1,4 +1,3 @@
-
 package presentation;
 
 import java.text.SimpleDateFormat;
@@ -7,6 +6,16 @@ import java.util.List;
 import javax.swing.table.DefaultTableModel;
 import domain.Controller;
 import domain.Gaest;
+
+/**
+ * Semesterprojekt - "Casablanca Holiday Center"
+ * 2. semester 2014
+ * 
+ * Udarbejdet af:
+ * Emil, Anders, Søren og Laura
+ * 
+ * Torsdag den 1. maj 2014 #Part 1
+ */
 
 public class GUIMedarbejder extends javax.swing.JFrame
 {

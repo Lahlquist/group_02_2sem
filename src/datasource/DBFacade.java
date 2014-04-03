@@ -1,11 +1,20 @@
+package datasource;
 
-package Datasource;
 import domain.Gaest;
 import domain.Booking;
 import domain.Lejlighed;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Semesterprojekt - "Casablanca Holiday Center"
+ * 2. semester 2014
+ * 
+ * Udarbejdet af:
+ * Emil, Anders, Søren og Laura
+ * 
+ * Torsdag den 1. maj 2014 #Part 1
+ */
 
 public class DBFacade
 {

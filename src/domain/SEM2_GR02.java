@@ -1,19 +1,19 @@
 package domain;
 
 /**
- * Semesterprojekt 2. semester 2014
- * Casablanca Holiday Center
+ * Semesterprojekt - "Casablanca Holiday Center"
+ * 2. semester 2014
+ * 
+ * Udarbejdet af:
  * Emil, Anders, Søren og Laura
+ * 
+ * Torsdag den 1. maj 2014 #Part 1
  */
 
 public class SEM2_GR02
 {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args)
     {
-        // TODO code application logic here
+        
     }
 }

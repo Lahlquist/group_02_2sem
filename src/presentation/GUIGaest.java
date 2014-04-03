@@ -1,18 +1,17 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package presentation;
 
 /**
- *
- * @author Søren
+ * Semesterprojekt - "Casablanca Holiday Center"
+ * 2. semester 2014
+ * 
+ * Udarbejdet af:
+ * Emil, Anders, Søren og Laura
+ * 
+ * Torsdag den 1. maj 2014 #Part 1
  */
+
 public class GUIGaest extends javax.swing.JFrame {
 
-    /**
-     * Creates new form GUIGaest
-     */
     public GUIGaest() {
         initComponents();
         setLocationRelativeTo(null);
