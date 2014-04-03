@@ -67,8 +67,8 @@ public class Controller
     
     
     // antal lejligheder ledige i given periode.
-    public int getRoomsList(String x, String y) {
-        currentARListe = facade.getRoomsList(x,y);
+    public int getRoomsList(String x, String y, String w) {
+        currentARListe = facade.getRoomsList(x,y,w);
         int rooms = currentARListe.size();
         
         return rooms;
