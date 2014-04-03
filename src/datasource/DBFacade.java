@@ -6,6 +6,8 @@ import domain.Lejlighed;
 import java.util.ArrayList;
 import java.util.List;
 
+//HEJ DET HER ER EN TEST
+
 /**
  * Semesterprojekt - "Casablanca Holiday Center"
  * 2. semester 2014
