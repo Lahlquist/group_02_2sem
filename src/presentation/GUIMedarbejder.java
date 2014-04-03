@@ -538,7 +538,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
 
     private void jTextFieldFornavnActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jTextFieldFornavnActionPerformed
     {//GEN-HEADEREND:event_jTextFieldFornavnActionPerformed
-        // FEJL SKAL SLETTES HVIS DET KAN LADE SIG GØRE
+        // FEJL - SKAL SLETTES HVIS DET KAN LADE SIG GØRE!
     }//GEN-LAST:event_jTextFieldFornavnActionPerformed
 
     private void jButtonCheckudsigtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCheckudsigtActionPerformed
@@ -550,7 +550,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
        String xFormat = format.format(x);
        String yFormat = format.format(y);
 
-       jLabel14.setText(Integer.toString(c.getRoomsList(xFormat, yFormat)));
+       jLabel14.setText(Integer.toString(c.getRoomsList(xFormat, yFormat, roomTypeChoosen )));
     }//GEN-LAST:event_jButtonCheckudsigtActionPerformed
 
     private void SingleRumBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SingleRumBtnActionPerformed

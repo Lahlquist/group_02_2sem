@@ -23,11 +23,12 @@ import domain.Booking;
 public class Mapper
 {
     
+    //FIELDS
     ArrayList<Integer> ledig_id = new ArrayList<>();
     private final Connection con;
 
     
-    
+    //CONSTRUCTOR   
     public Mapper(Connection con)
     {
         this.con = con;
@@ -320,6 +321,4 @@ public class Mapper
         
         return lejlighedsNR;
     }
-    
-    
 }

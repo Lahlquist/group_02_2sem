@@ -13,7 +13,7 @@ package domain;
 public class Booking
 {
     String booking_id;
-    int lejlighed_id;
+    int    lejlighed_id;
     String checkIn;
     String checkUd;
     
