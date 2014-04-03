@@ -41,7 +41,7 @@ public class Controller
         return currentgListe;
     }
 
-    public Gaest createNewBooking(String gaeid, String fnavn, String enavn, int telnu, String mail, String vnavn, int vno, int pno, String bnavn, String land, String rbu)
+    public Gaest createNewBooking(int gaeid, String fnavn, String enavn, int telnu, String mail, String vnavn, int vno, int pno, String bnavn, String land, String rbu)
     {
         gaest = new Gaest(gaeid, fnavn, enavn, telnu, mail, vnavn, vno, pno, bnavn, land, rbu);
         boolean status = facade.createNewBooking(gaest);
@@ -67,11 +67,22 @@ public class Controller
     
     
     // antal lejligheder ledige i given periode.
-    public int getRoomsList(String x, String y) {
-        currentARListe = facade.getRoomsList(x,y);
+    public int getRoomsList(String x, String y, String w) {
+        currentARListe = facade.getRoomsList(x,y,w);
         int rooms = currentARListe.size();
         
         return rooms;
+    }
+
+    public Gaest createNewGaest(int gaeid, String fnavn, String enavn, int telnu, String mail, String vnavn, int vno, int pno, String bnavn, String land, String rbu)
+    {
+        gaest = new Gaest(gaeid, fnavn, enavn, telnu, mail, vnavn, vno, pno, bnavn, land, rbu);
+        boolean status = facade.createNewGaest(gaest);
+        if (!status);
+        {
+            gaest = null;
+        }
+        return gaest;
     }
     
     

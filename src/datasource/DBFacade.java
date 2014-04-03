@@ -6,8 +6,6 @@ import domain.Lejlighed;
 import java.util.ArrayList;
 import java.util.List;
 
-//HEJ DET HER ER EN TEST
-
 /**
  * Semesterprojekt - "Casablanca Holiday Center"
  * 2. semester 2014
@@ -20,11 +18,17 @@ import java.util.List;
 
 public class DBFacade
 {
+    //FIELDS
     private final Mapper mapp;
+    
+    
+    //CONSTRUCTOR
     public DBFacade()
     {
         mapp = new Mapper(DBConnector.getConnection());
     }
+    
+    
     
     public List<Gaest> getGaesteListe()
     {
@@ -51,9 +55,13 @@ public class DBFacade
         return (mapp.tjekLogind(brugernavn, kode));
     }
     
-    // ANDERS - NYT 
-    
-    public ArrayList<Booking> getRoomsList(String x, String y) {
-        return mapp.getRooms(x, y);
+    //ANDERS - NYT     
+    public ArrayList<Booking> getRoomsList(String x, String y, String w) {
+        return mapp.getRooms(x, y, w);
+    }
+
+    public boolean createNewGaest(Gaest gaest)
+    {
+        return mapp.createNewgaest(gaest);
     }
 }
