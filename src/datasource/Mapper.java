@@ -23,7 +23,7 @@ import domain.Booking;
 public class Mapper
 {
     
-    ArrayList<Booking> ledig_id = new ArrayList<>();
+    ArrayList<Integer> ledig_id = new ArrayList<>();
     private final Connection con;
 
     
@@ -52,11 +52,11 @@ public class Mapper
                 String gaeid = rs.getString("GAEST_ID");
                 String fnavn = rs.getString("FORNAVN_E");
                 String enavn = rs.getString("EFTERNAVN");
-                int telnu    = rs.getInt("TELEFONNUMMER");
+                int telnu    = rs.getInt   ("TELEFONNUMMER");
                 String mail  = rs.getString("E_MAIL");
                 String vnavn = rs.getString("VEJNAVN");
-                int vno      = rs.getInt("VEJNUMMER");
-                int pno      = rs.getInt("POSTNUMMER");
+                int vno      = rs.getInt   ("VEJNUMMER");
+                int pno      = rs.getInt   ("POSTNUMMER");
                 String bnavn = rs.getString("BYNAVN");
                 String land  = rs.getString("LAND");
                 String rbu   = rs.getString("REJSEBUREAU");
@@ -181,9 +181,8 @@ public class Mapper
     
     
     // plus alle de lejligheder som ikke er booket i fremtiden eller nu.
-    public ArrayList getRooms(String x, String y) {
-        System.out.println(x);
-        System.out.println(y);
+    public ArrayList getRooms(String x, String y, String w) {
+        
         ledig_id.clear();
         
         String SQLString =
@@ -198,22 +197,33 @@ public class Mapper
                 + "  CHECK_OUT_DATO      < to_date('" + y + "','DD-MM-YYYY') OR "
                 + "  CHECK_IN_DATO       < to_date('" + x + "','DD-MM-YYYY') AND "
                 + "  CHECK_OUT_DATO      > to_date('" + y + "','DD-MM-YYYY'))";
+       
+        String SQLString2 = "SELECT LEJLIGHED_ID FROM LEJLIGHED_TBL" +
+                            " WHERE LEJLIGHED_TYPE = '"+ w +"' AND LEJLIGHED_ID" +
+                            " NOT IN (select LEJLIGHED_ID FROM BOOKEDE_LEJLIGHED_TBL)";
         
         
-        
-        PreparedStatement statement = null;
+        PreparedStatement statement  = null;
+        PreparedStatement statement2 = null;
         
         try {
-            statement = con.prepareStatement(SQLString);
+            statement    = con.prepareStatement(SQLString);
             ResultSet rs = statement.executeQuery();
             
             while (rs.next()) {
-                String BOOK_ID   = rs.getString(1);
-                int LEJ_ID       = rs.getInt(2);
-                String CHECK_IND = rs.getString(3);
-                String CHECK_UD  = rs.getString(4);
+        //        String BOOK_ID   = rs.getString(1);
+                  int LEJ_ID       = rs.getInt   (2);
+        //        String CHECK_IND = rs.getString(3);
+        //        String CHECK_UD  = rs.getString(4);
                 
-                ledig_id.add(new Booking(BOOK_ID, LEJ_ID, CHECK_IND, CHECK_UD));               
+                ledig_id.add(LEJ_ID);               
+            }            
+            statement2    = con.prepareStatement(SQLString2);
+            ResultSet rs2 = statement2.executeQuery();
+           
+            while (rs2.next()) {
+            int LEJ_ID = rs2.getInt(1);
+            ledig_id.add(LEJ_ID);
             }
             
         }
@@ -294,7 +304,8 @@ public class Mapper
     //skal udvælge en lejlighed til currentGæst.
     public int tildelLejlighed() {
         
-        int lejlighedsNR = ledig_id.get(0).getLejlighed_id();
+        int lejlighedsNR = ledig_id.get(0);
+        
         String SQLString = "select * from lejlighed where id = " + lejlighedsNR + "";
         
         String SQLInsert = ""; // Insert " 'booked' i lejlighed_tbl hvis ikke allerede.
