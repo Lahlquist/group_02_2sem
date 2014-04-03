@@ -59,4 +59,9 @@ public class DBFacade
     public ArrayList<Booking> getRoomsList(String x, String y, String w) {
         return mapp.getRooms(x, y, w);
     }
+
+    public boolean createNewGaest(Gaest gaest)
+    {
+        return mapp.createNewgaest(gaest);
+    }
 }

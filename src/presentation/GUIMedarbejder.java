@@ -48,7 +48,6 @@ public class GUIMedarbejder extends javax.swing.JFrame
         GaesteListen = new javax.swing.JTable();
         jButtonGetGuestList = new javax.swing.JButton();
         jLabelInfoOversigt = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jTextFieldFornavn = new javax.swing.JTextField();
         jTextFieldEfternavn = new javax.swing.JTextField();
@@ -86,6 +85,72 @@ public class GUIMedarbejder extends javax.swing.JFrame
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jButtonHentOversigt = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jTextFieldEfternavn2 = new javax.swing.JTextField();
+        jTextFieldFornavn2 = new javax.swing.JTextField();
+        jTextFieldLand2 = new javax.swing.JTextField();
+        jTextFieldEmail2 = new javax.swing.JTextField();
+        jLabel34 = new javax.swing.JLabel();
+        jTextFieldTelefonnummer2 = new javax.swing.JTextField();
+        jLabel35 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jTextfieldPostnummer2 = new javax.swing.JTextField();
+        jTextfieldRejsebureau2 = new javax.swing.JTextField();
+        jTextfieldVejnavn2 = new javax.swing.JTextField();
+        jDateChooserCheckind1 = new com.toedter.calendar.JDateChooser();
+        jLabelInfo2 = new javax.swing.JLabel();
+        jDateChooserCheckud1 = new com.toedter.calendar.JDateChooser();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jTextfieldVejnummer2 = new javax.swing.JTextField();
+        jTextFieldLejlighedsID1 = new javax.swing.JTextField();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        jTextfieldBynavn2 = new javax.swing.JTextField();
+        jLabel44 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jLabel45 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jTextfieldBynavn1 = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jTextfieldRejsebureau1 = new javax.swing.JTextField();
+        jTextfieldPostnummer1 = new javax.swing.JTextField();
+        jLabelInfo1 = new javax.swing.JLabel();
+        jTextfieldVejnavn1 = new javax.swing.JTextField();
+        jTextfieldVejnummer1 = new javax.swing.JTextField();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jTextFieldTelefonnummer1 = new javax.swing.JTextField();
+        jTextFieldLand1 = new javax.swing.JTextField();
+        jTextFieldEmail1 = new javax.swing.JTextField();
+        jTextFieldEfternavn1 = new javax.swing.JTextField();
+        jTextFieldFornavn1 = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jTextFieldLejlighedsID = new javax.swing.JTextField();
+        jLabel28 = new javax.swing.JLabel();
+        jDateChooserCheckind = new com.toedter.calendar.JDateChooser();
+        jDateChooserCheckud = new com.toedter.calendar.JDateChooser();
+        jLabel29 = new javax.swing.JLabel();
+        jButtonOpretGæst = new javax.swing.JButton();
+        jLabelGæstoprettetinfo = new javax.swing.JLabel();
 
         jTextField1.setText("jTextField1");
 
@@ -112,6 +177,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        GaesteListen.setAutoCreateRowSorter(true);
         GaesteListen.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][]
             {
@@ -153,9 +219,11 @@ public class GUIMedarbejder extends javax.swing.JFrame
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 1166, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButtonGetGuestList)
-                        .addGap(49, 49, 49)
-                        .addComponent(jLabelInfoOversigt)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(158, 158, 158)
+                                .addComponent(jLabelInfoOversigt))
+                            .addComponent(jButtonGetGuestList))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -163,28 +231,15 @@ public class GUIMedarbejder extends javax.swing.JFrame
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonGetGuestList)
-                    .addComponent(jLabelInfoOversigt))
-                .addContainerGap(146, Short.MAX_VALUE))
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 473, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelInfoOversigt)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addComponent(jButtonGetGuestList)
+                .addGap(31, 31, 31))
         );
 
         jTabbedPane1.addTab("Gæst Oversigt", jPanel1);
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1186, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 557, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("Tilføjelse af Gæst", jPanel2);
 
         jTextFieldFornavn.addActionListener(new java.awt.event.ActionListener()
         {
@@ -464,6 +519,354 @@ public class GUIMedarbejder extends javax.swing.JFrame
 
         jTabbedPane1.addTab("Værelse Oversigt", jPanel4);
 
+        jLabel30.setText("Lejligheds ID: ");
+
+        jLabel31.setText("Tilknyt Gæst til en Lejlighed");
+
+        jLabel32.setText("Efternavn:");
+
+        jLabel33.setText("Fornavn:");
+
+        jTextFieldFornavn2.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jTextFieldFornavn2ActionPerformed(evt);
+            }
+        });
+
+        jLabel34.setText("Postnummer:");
+
+        jLabel35.setText("Vejnummer:");
+
+        jButton2.setText("Rediger Gæst");
+
+        jLabel36.setText("Rejsebureau:");
+
+        jLabel37.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel37.setText("Adresse:");
+
+        jLabel38.setText("Bynavn:");
+
+        jLabel39.setText("E-mail:");
+
+        jLabel40.setText("Check Ud:");
+
+        jLabel41.setText("Vejnavn:");
+
+        jLabel42.setText("Check Ind:");
+
+        jLabel43.setText("Telefonnummer:");
+
+        jLabel44.setText("Land:");
+
+        jButton3.setText("Slet Gæst");
+
+        jLabel45.setText("Gæst ID:");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel37)
+                        .addGap(724, 724, 724))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(jLabel42)
+                                .addGap(35, 35, 35)
+                                .addComponent(jDateChooserCheckind1, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel32)
+                                    .addComponent(jLabel44)
+                                    .addComponent(jLabel38)
+                                    .addComponent(jLabel41)
+                                    .addComponent(jLabel33)
+                                    .addComponent(jLabel45))
+                                .addGap(38, 38, 38)
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextFieldEfternavn2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldLand2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldFornavn2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                    .addComponent(jTextfieldBynavn2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                    .addComponent(jTextfieldVejnavn2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                    .addComponent(jTextField2))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 412, Short.MAX_VALUE)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel43)
+                                    .addComponent(jLabel39)
+                                    .addComponent(jLabel36)
+                                    .addComponent(jLabel34)
+                                    .addComponent(jLabel35)
+                                    .addComponent(jLabel40))
+                                .addGap(38, 38, 38)
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jDateChooserCheckud1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldEmail2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldTelefonnummer2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                    .addComponent(jTextfieldRejsebureau2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                    .addComponent(jTextfieldPostnummer2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                    .addComponent(jTextfieldVejnummer2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)))
+                            .addComponent(jLabel31)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(jLabel30)
+                                .addGap(48, 48, 48)
+                                .addComponent(jTextFieldLejlighedsID1)))
+                        .addGap(312, 312, 312))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(72, 72, 72)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGap(203, 203, 203)
+                                .addComponent(jButton2)
+                                .addGap(99, 99, 99)
+                                .addComponent(jButton3)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(jLabelInfo2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(734, 734, 734))))))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap(76, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel42, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jDateChooserCheckind1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel40, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jDateChooserCheckud1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(54, 54, 54)
+                .addComponent(jLabel31)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel30)
+                        .addComponent(jLabel45)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldLejlighedsID1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldFornavn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel33)
+                    .addComponent(jTextFieldEmail2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel39))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldEfternavn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel32)
+                    .addComponent(jTextFieldTelefonnummer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel43))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldLand2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel44)
+                    .addComponent(jTextfieldRejsebureau2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel36))
+                .addGap(26, 26, 26)
+                .addComponent(jLabel37)
+                .addGap(20, 20, 20)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextfieldBynavn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextfieldPostnummer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel38)
+                    .addComponent(jLabel34))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextfieldVejnavn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextfieldVejnummer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel41)
+                    .addComponent(jLabel35))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabelInfo2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
+                .addGap(33, 33, 33))
+        );
+
+        jTabbedPane1.addTab("Redigering / Sletning af Gæst", jPanel5);
+
+        jLabel15.setText("E-mail:");
+
+        jLabel16.setText("Telefonnummer:");
+
+        jLabel17.setText("Land:");
+
+        jLabel18.setText("Vejnummer:");
+
+        jLabel19.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel19.setText("Adresse:");
+
+        jLabel20.setText("Rejsebureau:");
+
+        jLabel21.setText("Bynavn:");
+
+        jLabel22.setText("Vejnavn:");
+
+        jLabel23.setText("Postnummer:");
+
+        jTextFieldFornavn1.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jTextFieldFornavn1ActionPerformed(evt);
+            }
+        });
+
+        jLabel24.setText("Efternavn:");
+
+        jLabel25.setText("Fornavn:");
+
+        jLabel26.setText("Lejligheds ID: ");
+
+        jLabel27.setText("Tilknyt Gæst til en Lejlighed");
+
+        jLabel28.setText("Check Iind:");
+
+        jLabel29.setText("Check Ud:");
+
+        jButtonOpretGæst.setText("Opret Gæst");
+        jButtonOpretGæst.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jButtonOpretGæstActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel26)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel6Layout.createSequentialGroup()
+                                    .addComponent(jLabel19)
+                                    .addGap(412, 412, 412))
+                                .addGroup(jPanel6Layout.createSequentialGroup()
+                                    .addComponent(jLabel27)
+                                    .addGap(0, 0, Short.MAX_VALUE))
+                                .addGroup(jPanel6Layout.createSequentialGroup()
+                                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addGroup(jPanel6Layout.createSequentialGroup()
+                                            .addComponent(jLabel28)
+                                            .addGap(35, 35, 35)
+                                            .addComponent(jDateChooserCheckind, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createSequentialGroup()
+                                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jLabel25)
+                                                .addComponent(jLabel24)
+                                                .addComponent(jLabel17)
+                                                .addComponent(jLabel21)
+                                                .addComponent(jLabel22))
+                                            .addGap(38, 38, 38)
+                                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(jTextFieldEfternavn1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                                .addComponent(jTextFieldLand1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                                .addComponent(jTextFieldFornavn1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                                .addComponent(jTextfieldBynavn1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                                .addComponent(jTextfieldVejnavn1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                                .addComponent(jTextFieldLejlighedsID))))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 412, Short.MAX_VALUE)
+                                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel16)
+                                        .addComponent(jLabel15)
+                                        .addComponent(jLabel20)
+                                        .addComponent(jLabel23)
+                                        .addComponent(jLabel18)
+                                        .addComponent(jLabel29)
+                                        .addComponent(jLabelGæstoprettetinfo))
+                                    .addGap(38, 38, 38)
+                                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jDateChooserCheckud, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jTextFieldEmail1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                        .addComponent(jTextFieldTelefonnummer1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                        .addComponent(jTextfieldRejsebureau1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                        .addComponent(jTextfieldPostnummer1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                        .addComponent(jTextfieldVejnummer1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE))))
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addGap(72, 72, 72)
+                                .addComponent(jLabelInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(422, 422, 422)))
+                        .addGap(312, 312, 312))))
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(415, 415, 415)
+                .addComponent(jButtonOpretGæst)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap(76, Short.MAX_VALUE)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel28, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jDateChooserCheckind, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel29, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jDateChooserCheckud, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(54, 54, 54)
+                .addComponent(jLabel27)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel26)
+                    .addComponent(jTextFieldLejlighedsID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldFornavn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel25)
+                    .addComponent(jTextFieldEmail1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel15))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldEfternavn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel24)
+                    .addComponent(jTextFieldTelefonnummer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel16))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldLand1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel17)
+                    .addComponent(jTextfieldRejsebureau1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel20))
+                .addGap(26, 26, 26)
+                .addComponent(jLabel19)
+                .addGap(20, 20, 20)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextfieldBynavn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextfieldPostnummer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel21)
+                    .addComponent(jLabel23))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextfieldVejnavn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextfieldVejnummer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel22)
+                    .addComponent(jLabel18))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabelInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonOpretGæst)
+                    .addComponent(jLabelGæstoprettetinfo))
+                .addGap(33, 33, 33))
+        );
+
+        jTabbedPane1.addTab("Tilføjelse af Gæst", jPanel6);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -477,22 +880,101 @@ public class GUIMedarbejder extends javax.swing.JFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 585, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButtonOpretGæstActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonOpretGæstActionPerformed
+    {//GEN-HEADEREND:event_jButtonOpretGæstActionPerformed
+        int tlfno = Integer.parseInt(jTextFieldTelefonnummer1.getText());
+        int vno = Integer.parseInt(jTextfieldVejnummer1.getText());
+        int pno = Integer.parseInt(jTextfieldPostnummer1.getText());
+        //     jTextFieldFornavn.getText();
+        //     jTextFieldEfternavn.getText();
+        //     jTextFieldLand.getText();
+        //     jTextFieldEmail.getText();
+        //     jTextfieldAntalnætter.getText();
+
+        Gaest status = c.createNewGaest(count, jTextFieldFornavn1.getText(), jTextFieldEfternavn1.getText(), tlfno, jTextFieldEmail1.getText(), jTextfieldVejnavn1.getText(), vno, pno, jTextfieldBynavn1.getText(), jTextFieldLand1.getText(), jTextfieldRejsebureau1.getText());
+        jLabelGæstoprettetinfo.setText("Gæst Oprettet!") ;
+    }//GEN-LAST:event_jButtonOpretGæstActionPerformed
+
+    private void jTextFieldFornavn1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jTextFieldFornavn1ActionPerformed
+    {//GEN-HEADEREND:event_jTextFieldFornavn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldFornavn1ActionPerformed
+
+    private void jTextFieldFornavn2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jTextFieldFornavn2ActionPerformed
+    {//GEN-HEADEREND:event_jTextFieldFornavn2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldFornavn2ActionPerformed
+
+    private void jButtonHentOversigtActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonHentOversigtActionPerformed
+    {//GEN-HEADEREND:event_jButtonHentOversigtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonHentOversigtActionPerformed
+
+    private void jButtonCheckudsigtActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonCheckudsigtActionPerformed
+    {//GEN-HEADEREND:event_jButtonCheckudsigtActionPerformed
+        SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
+
+        Date x = jDateChooser1.getDate();
+        Date y = jDateChooser2.getDate();
+
+        String xFormat = format.format(x);
+        String yFormat = format.format(y);
+
+        jLabel14.setText(Integer.toString(c.getRoomsList(xFormat, yFormat, roomTypeChoosen )));
+    }//GEN-LAST:event_jButtonCheckudsigtActionPerformed
+
+    private void jButtonBekræftBookingActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonBekræftBookingActionPerformed
+    {//GEN-HEADEREND:event_jButtonBekræftBookingActionPerformed
+        int tlfno = Integer.parseInt(jTextFieldTelefonnummer.getText());
+        int vno = Integer.parseInt(jTextfieldVejnummer.getText());
+        int pno = Integer.parseInt(jTextfieldPostnummer.getText());
+        //     jTextFieldFornavn.getText();
+        //     jTextFieldEfternavn.getText();
+        //     jTextFieldLand.getText();
+        //     jTextFieldEmail.getText();
+        //     jTextfieldAntalnætter.getText();
+
+        Gaest status = c.createNewBooking(count, jTextFieldFornavn.getText(), jTextFieldEfternavn.getText(), tlfno, jTextFieldEmail.getText(), jTextfieldVejnavn.getText(), vno, pno, jTextfieldBynavn.getText(), jTextFieldLand.getText(), jTextfieldRejsebureau.getText());
+        jLabelInfo.setText("Gæst Oprettet!") ;
+    }//GEN-LAST:event_jButtonBekræftBookingActionPerformed
+
+    private void DobbeltRumBtnActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_DobbeltRumBtnActionPerformed
+    {//GEN-HEADEREND:event_DobbeltRumBtnActionPerformed
+        roomTypeChoosen = "DOBBELT";
+    }//GEN-LAST:event_DobbeltRumBtnActionPerformed
+
+    private void FamilieRumBtnActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_FamilieRumBtnActionPerformed
+    {//GEN-HEADEREND:event_FamilieRumBtnActionPerformed
+        roomTypeChoosen = "FAMILIE";
+    }//GEN-LAST:event_FamilieRumBtnActionPerformed
+
+    private void SingleRumBtnActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_SingleRumBtnActionPerformed
+    {//GEN-HEADEREND:event_SingleRumBtnActionPerformed
+        roomTypeChoosen = "SINGLE";
+    }//GEN-LAST:event_SingleRumBtnActionPerformed
+
+    private void jTextFieldFornavnActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jTextFieldFornavnActionPerformed
+    {//GEN-HEADEREND:event_jTextFieldFornavnActionPerformed
+        // FEJL - SKAL SLETTES HVIS DET KAN LADE SIG GØRE!
+    }//GEN-LAST:event_jTextFieldFornavnActionPerformed
+
     private void jButtonGetGuestListActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonGetGuestListActionPerformed
     {//GEN-HEADEREND:event_jButtonGetGuestListActionPerformed
-        
+
         jLabelInfoOversigt.setText("Oversigt hentet!");
         DefaultTableModel Gaesteliste =(DefaultTableModel)GaesteListen.getModel();
         List<Gaest> gaesteListe = c.getGaesteListe();
         for(Gaest g : gaesteListe)
         {
-            Gaesteliste.addRow(new Object[]{
+            Gaesteliste.addRow(new Object[]
+            {
                 g.getGaestid(),
                 g.getFornavn(),
                 g.getEfternavn(),
@@ -505,61 +987,10 @@ public class GUIMedarbejder extends javax.swing.JFrame
                 g.getLand(),
                 g.getRejsebureau()
             });
-           
+
         }
-        
-        
+
     }//GEN-LAST:event_jButtonGetGuestListActionPerformed
-
-    private void jButtonHentOversigtActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonHentOversigtActionPerformed
-    {//GEN-HEADEREND:event_jButtonHentOversigtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonHentOversigtActionPerformed
-
-    private void jButtonBekræftBookingActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonBekræftBookingActionPerformed
-    {//GEN-HEADEREND:event_jButtonBekræftBookingActionPerformed
-        int tlfno = Integer.parseInt(jTextFieldTelefonnummer.getText());
-        int vno = Integer.parseInt(jTextfieldVejnummer.getText());
-        int pno = Integer.parseInt(jTextfieldPostnummer.getText());
-        //     jTextFieldFornavn.getText();
-        //     jTextFieldEfternavn.getText();
-        //     jTextFieldLand.getText();
-        //     jTextFieldEmail.getText();
-        //     jTextfieldAntalnætter.getText();
-        
-        Gaest status = c.createNewBooking(null, jTextFieldFornavn.getText(), jTextFieldEfternavn.getText(), tlfno, jTextFieldEmail.getText(), jTextfieldVejnavn.getText(), vno, pno, jTextfieldBynavn.getText(), jTextFieldLand.getText(), jTextfieldRejsebureau.getText());
-        jLabelInfo.setText("Gæst Oprettet!") ;
-    }//GEN-LAST:event_jButtonBekræftBookingActionPerformed
-
-    private void FamilieRumBtnActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_FamilieRumBtnActionPerformed
-    {//GEN-HEADEREND:event_FamilieRumBtnActionPerformed
-        roomTypeChoosen = "FAMILIE";
-    }//GEN-LAST:event_FamilieRumBtnActionPerformed
-
-    private void jTextFieldFornavnActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jTextFieldFornavnActionPerformed
-    {//GEN-HEADEREND:event_jTextFieldFornavnActionPerformed
-        // FEJL - SKAL SLETTES HVIS DET KAN LADE SIG GØRE!
-    }//GEN-LAST:event_jTextFieldFornavnActionPerformed
-
-    private void jButtonCheckudsigtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCheckudsigtActionPerformed
-       SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
-              
-       Date x = jDateChooser1.getDate();
-       Date y = jDateChooser2.getDate();
-       
-       String xFormat = format.format(x);
-       String yFormat = format.format(y);
-
-       jLabel14.setText(Integer.toString(c.getRoomsList(xFormat, yFormat, roomTypeChoosen )));
-    }//GEN-LAST:event_jButtonCheckudsigtActionPerformed
-
-    private void SingleRumBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SingleRumBtnActionPerformed
-        roomTypeChoosen = "SINGLE";
-    }//GEN-LAST:event_SingleRumBtnActionPerformed
-
-    private void DobbeltRumBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DobbeltRumBtnActionPerformed
-        roomTypeChoosen = "DOBBELT";
-    }//GEN-LAST:event_DobbeltRumBtnActionPerformed
 
 
     public static void main(String args[])
@@ -611,35 +1042,77 @@ public class GUIMedarbejder extends javax.swing.JFrame
     private javax.swing.JRadioButton SingleRumBtn;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButtonBekræftBooking;
     private javax.swing.JButton jButtonCheckudsigt;
     private javax.swing.JButton jButtonGetGuestList;
     private javax.swing.JButton jButtonHentOversigt;
+    private javax.swing.JButton jButtonOpretGæst;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private com.toedter.calendar.JDateChooser jDateChooser2;
+    private com.toedter.calendar.JDateChooser jDateChooserCheckind;
+    private com.toedter.calendar.JDateChooser jDateChooserCheckind1;
+    private com.toedter.calendar.JDateChooser jDateChooserCheckud;
+    private com.toedter.calendar.JDateChooser jDateChooserCheckud1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelGæstoprettetinfo;
     private javax.swing.JLabel jLabelInfo;
+    private javax.swing.JLabel jLabelInfo1;
+    private javax.swing.JLabel jLabelInfo2;
     private javax.swing.JLabel jLabelInfoOversigt;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -647,16 +1120,39 @@ public class GUIMedarbejder extends javax.swing.JFrame
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextFieldEfternavn;
+    private javax.swing.JTextField jTextFieldEfternavn1;
+    private javax.swing.JTextField jTextFieldEfternavn2;
     private javax.swing.JTextField jTextFieldEmail;
+    private javax.swing.JTextField jTextFieldEmail1;
+    private javax.swing.JTextField jTextFieldEmail2;
     private javax.swing.JTextField jTextFieldFornavn;
+    private javax.swing.JTextField jTextFieldFornavn1;
+    private javax.swing.JTextField jTextFieldFornavn2;
     private javax.swing.JTextField jTextFieldLand;
+    private javax.swing.JTextField jTextFieldLand1;
+    private javax.swing.JTextField jTextFieldLand2;
+    private javax.swing.JTextField jTextFieldLejlighedsID;
+    private javax.swing.JTextField jTextFieldLejlighedsID1;
     private javax.swing.JTextField jTextFieldTelefonnummer;
+    private javax.swing.JTextField jTextFieldTelefonnummer1;
+    private javax.swing.JTextField jTextFieldTelefonnummer2;
     private javax.swing.JTextField jTextfieldBynavn;
+    private javax.swing.JTextField jTextfieldBynavn1;
+    private javax.swing.JTextField jTextfieldBynavn2;
     private javax.swing.JTextField jTextfieldPostnummer;
+    private javax.swing.JTextField jTextfieldPostnummer1;
+    private javax.swing.JTextField jTextfieldPostnummer2;
     private javax.swing.JTextField jTextfieldRejsebureau;
+    private javax.swing.JTextField jTextfieldRejsebureau1;
+    private javax.swing.JTextField jTextfieldRejsebureau2;
     private javax.swing.JTextField jTextfieldVejnavn;
+    private javax.swing.JTextField jTextfieldVejnavn1;
+    private javax.swing.JTextField jTextfieldVejnavn2;
     private javax.swing.JTextField jTextfieldVejnummer;
+    private javax.swing.JTextField jTextfieldVejnummer1;
+    private javax.swing.JTextField jTextfieldVejnummer2;
     // End of variables declaration//GEN-END:variables
 }

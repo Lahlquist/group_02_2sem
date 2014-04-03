@@ -15,7 +15,7 @@ import java.util.List;
 
 public class Gaest
 {
-    private String gaestid;
+    private int gaestid;
     private String fornavn;
     private String efternavn;
     private int telefonnummer;
@@ -30,7 +30,7 @@ public class Gaest
 
 
     
-    public Gaest(String gaeid, String fnavn, String enavn, int telnu, String mail, String vnavn, int vno, int pno, String bnavn, String land, String rbu)
+    public Gaest(int gaeid, String fnavn, String enavn, int telnu, String mail, String vnavn, int vno, int pno, String bnavn, String land, String rbu)
     { 
         gaestid = gaeid;
         fornavn = fnavn;
@@ -51,12 +51,12 @@ public class Gaest
     }
 
 
-    public String getGaestid()
+    public int getGaestid()
     {
         return gaestid;
     }
 
-    public void setGaestid(String gaestid)
+    public void setGaestid(int gaestid)
     {
         this.gaestid = gaestid;
     }

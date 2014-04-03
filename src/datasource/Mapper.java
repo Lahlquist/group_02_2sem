@@ -50,7 +50,7 @@ public class Mapper
 
             while (rs.next())
             {
-                String gaeid = rs.getString("GAEST_ID");
+                int gaeid = rs.getInt("GAEST_ID");
                 String fnavn = rs.getString("FORNAVN_E");
                 String enavn = rs.getString("EFTERNAVN");
                 int telnu    = rs.getInt   ("TELEFONNUMMER");
@@ -92,12 +92,21 @@ public class Mapper
         int rowsInserted = 0;
         String SQLStringGæst = "insert into GAEST_TBL "
                 + "values (?,?,?,?,?,?,?,?,?,?,?)";
-        
+        String SQLString1 = "select gaest_iddd.nextval  "
+                + "from dual";
+
         PreparedStatement statement = null;
         try
         {
+
+            statement = con.prepareStatement(SQLString1);
+            ResultSet rs = statement.executeQuery();
+            if (rs.next())
+            {
+                g.setGaestid(rs.getInt(1));
+            }
             statement = con.prepareStatement(SQLStringGæst);
-            statement.setInt(1, 1413212);
+            statement.setInt(1, g.getGaestid());
             statement.setString(2,g.getFornavn() );
             statement.setString(3, g.getEfternavn());
             statement.setInt(4, g.getTelefonnummer());
@@ -321,4 +330,54 @@ public class Mapper
         
         return lejlighedsNR;
     }
-}
+
+    boolean createNewgaest(Gaest gaest)
+    {
+        int rowsInserted = 0;
+        String SQLStringGæst = "insert into GAEST_TBL "
+                + "values (?,?,?,?,?,?,?,?,?,?,?)";
+        String SQLString1 = "select gaest_iddd.nextval  "
+                + "from dual";
+
+        PreparedStatement statement = null;
+        try
+        {
+
+            statement = con.prepareStatement(SQLString1);
+            ResultSet rs = statement.executeQuery();
+            if (rs.next())
+            {
+                gaest.setGaestid(rs.getInt(1));
+            }
+            statement = con.prepareStatement(SQLStringGæst);
+            statement.setInt(1, gaest.getGaestid());
+            statement.setString(2, gaest.getFornavn());
+            statement.setString(3, gaest.getEfternavn());
+            statement.setInt(4, gaest.getTelefonnummer());
+            statement.setString(5, gaest.getEmail());
+            statement.setString(6, gaest.getVejnavn());
+            statement.setInt(7, gaest.getVejnummer());
+            statement.setInt(8, gaest.getPostnummer());
+            statement.setString(9, gaest.getBynavn());
+            statement.setString(10, gaest.getLand());
+            statement.setString(11, gaest.getRejsebureau());
+            rowsInserted = statement.executeUpdate();
+
+        } catch (SQLException e)
+        {
+            System.out.println("Fejler i mapper - Create New Booking før close");
+            System.out.println(e.getMessage());
+        } finally
+        {
+            try
+            {
+                statement.close();
+            } catch (SQLException e)
+            {
+                System.out.println("Fejler i mapper - Create New booking");
+            }
+        }
+        return rowsInserted == 1;
+    }
+    }
+
