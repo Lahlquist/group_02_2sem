@@ -20,6 +20,7 @@ import domain.Booking;
  * Torsdag den 1. maj 2014 #Part 1
  */
 
+
 public class Mapper
 {
     
@@ -38,7 +39,6 @@ public class Mapper
     
     public List<Gaest> getGaester()
     {
-        Gaest gl = null;
         String SQLString =
                 " select * from GAEST_TBL";
         PreparedStatement statement = null;
@@ -90,17 +90,25 @@ public class Mapper
         public boolean createNewBooking(Gaest g)
     {
         int rowsInserted = 0;
-        String SQLStringGæst = "insert into GAEST_TBL "
-                + "values (?,?,?,?,?,?,?,?,?,?,?)";
-        String SQLString1 = "select gaest_iddd.nextval  "
-                + "from dual";
+        String SQLStringGæst = "insert into GAEST_TBL " +
+                               "values (?,?,?,?,?,?,?,?,?,?,?)";
+     
+        String SQLString1 = "select gaest_iddd.nextval " +
+                            "from dual";
 
+        String SQLStringGB = "insert into GAEST_BOOKING_TBL values (?,?)";
+       
+        String SQLStringLB = "insert into BOOKEDE_LEJLIGHED_TBL values (?,?,?,?)";
+        
         PreparedStatement statement = null;
+        
         try
         {
 
-            statement = con.prepareStatement(SQLString1);
+            statement    = con.prepareStatement(SQLString1);
             ResultSet rs = statement.executeQuery();
+            
+            
             if (rs.next())
             {
                 g.setGaestid(rs.getInt(1));
@@ -118,7 +126,23 @@ public class Mapper
             statement.setString(10, g.getLand());
             statement.setString(11, g.getRejsebureau());
             rowsInserted = statement.executeUpdate();
-
+            
+            statement = con.prepareStatement(SQLStringGB);
+            
+ 
+            statement.setInt(1, 1337);
+            statement.setInt(2,g.getGaestid());    
+            rowsInserted = statement.executeUpdate();
+            
+            statement = con.prepareStatement(SQLStringLB);
+            
+       
+            statement.setInt(1,1337);
+            statement.setInt(2,133);
+            statement.setDate(3,null);
+            statement.setDate(4, null);
+            rowsInserted = statement.executeUpdate();
+            
         } catch (SQLException e)
         {
             System.out.println("Fejler i mapper - Create New Booking før close");
@@ -140,7 +164,6 @@ public class Mapper
     {
         throw new UnsupportedOperationException("Not supported yet.");
     }
-    
     
     
     
@@ -292,24 +315,6 @@ public class Mapper
         return rowsInserted == 1;
     }
   
-   // skal hente max booking id + 1 (3-4 cifre).
-    public int BookingIdGenerator() {
-        int newID = 0;
-        
-        String SQLString =
-                " select (MAX)BOOKING_ID from BOOKEDE_LEJLIGHED_TBL";
-        PreparedStatement statement = null;
-        try{ 
-            statement    = con.prepareStatement(SQLString);
-            ResultSet rs = statement.executeQuery();
-            newID        = rs.getInt("BOOKING_ID") + 1;
-            
-        }
-        catch(Exception e) {
-            System.out.println(e.getMessage());
-        }
-        return newID;
-    }
     
     //skal udvælge en lejlighed til currentGæst.
     public int tildelLejlighed() {
@@ -318,9 +323,7 @@ public class Mapper
         
         String SQLString = "select * from lejlighed where id = " + lejlighedsNR + "";
         
-        String SQLInsert = ""; // Insert " 'booked' i lejlighed_tbl hvis ikke allerede.
-                               // Burde måske ikke være booked status men null i datoer istedet?
-                               // Måske flytte booking id fra lejlighed til gæst? 
+
         try{
             
         }
@@ -331,6 +334,7 @@ public class Mapper
         return lejlighedsNR;
     }
 
+    
     boolean createNewgaest(Gaest gaest)
     {
         int rowsInserted = 0;
