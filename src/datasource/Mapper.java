@@ -37,6 +37,7 @@ public class Mapper
 
     
     
+    
     public List<Gaest> getGaester()
     {
         String SQLString =
@@ -50,7 +51,7 @@ public class Mapper
 
             while (rs.next())
             {
-                int gaeid = rs.getInt("GAEST_ID");
+                int gaeid    = rs.getInt("GAEST_ID");
                 String fnavn = rs.getString("FORNAVN_E");
                 String enavn = rs.getString("EFTERNAVN");
                 int telnu    = rs.getInt   ("TELEFONNUMMER");
@@ -114,31 +115,29 @@ public class Mapper
                 g.setGaestid(rs.getInt(1));
             }
             statement = con.prepareStatement(SQLStringGæst);
-            statement.setInt(1, g.getGaestid());
-            statement.setString(2,g.getFornavn() );
+            statement.setInt   (1, g.getGaestid());
+            statement.setString(2, g.getFornavn() );
             statement.setString(3, g.getEfternavn());
-            statement.setInt(4, g.getTelefonnummer());
+            statement.setInt   (4, g.getTelefonnummer());
             statement.setString(5, g.getEmail());
             statement.setString(6, g.getVejnavn());
-            statement.setInt(7, g.getVejnummer());
-            statement.setInt(8, g.getPostnummer());
+            statement.setInt   (7, g.getVejnummer());
+            statement.setInt   (8, g.getPostnummer());
             statement.setString(9, g.getBynavn());
-            statement.setString(10, g.getLand());
-            statement.setString(11, g.getRejsebureau());
+            statement.setString(10,g.getLand());
+            statement.setString(11,g.getRejsebureau());
             rowsInserted = statement.executeUpdate();
             
             statement = con.prepareStatement(SQLStringGB);
             
- 
             statement.setInt(1, 1337);
             statement.setInt(2,g.getGaestid());    
             rowsInserted = statement.executeUpdate();
             
             statement = con.prepareStatement(SQLStringLB);
             
-       
-            statement.setInt(1,1337);
-            statement.setInt(2,133);
+            statement.setInt (1,1337);
+            statement.setInt (2,133);
             statement.setDate(3,null);
             statement.setDate(4, null);
             rowsInserted = statement.executeUpdate();
@@ -298,8 +297,10 @@ public class Mapper
     boolean createNewgaest(Gaest gaest)
     {
         int rowsInserted = 0;
+        
         String SQLStringGæst = "insert into GAEST_TBL "
                 + "values (?,?,?,?,?,?,?,?,?,?,?)";
+        
         String SQLString1 = "select gaest_iddd.nextval  "
                 + "from dual";
 
@@ -309,19 +310,21 @@ public class Mapper
 
             statement = con.prepareStatement(SQLString1);
             ResultSet rs = statement.executeQuery();
+            
             if (rs.next())
             {
                 gaest.setGaestid(rs.getInt(1));
             }
+        
             statement = con.prepareStatement(SQLStringGæst);
-            statement.setInt(1, gaest.getGaestid());
+            statement.setInt   (1, gaest.getGaestid());
             statement.setString(2, gaest.getFornavn());
             statement.setString(3, gaest.getEfternavn());
-            statement.setInt(4, gaest.getTelefonnummer());
+            statement.setInt   (4, gaest.getTelefonnummer());
             statement.setString(5, gaest.getEmail());
             statement.setString(6, gaest.getVejnavn());
-            statement.setInt(7, gaest.getVejnummer());
-            statement.setInt(8, gaest.getPostnummer());
+            statement.setInt   (7, gaest.getVejnummer());
+            statement.setInt   (8, gaest.getPostnummer());
             statement.setString(9, gaest.getBynavn());
             statement.setString(10, gaest.getLand());
             statement.setString(11, gaest.getRejsebureau());
@@ -360,11 +363,11 @@ public class Mapper
                 g = new Gaest(gaeid,
                         rs.getString(2),
                         rs.getString(3),
-                        rs.getInt(4),
+                        rs.getInt   (4),
                         rs.getString(5),
                         rs.getString(6),
-                        rs.getInt(7),
-                        rs.getInt(8),
+                        rs.getInt   (7),
+                        rs.getInt   (8),
                         rs.getString(9),
                         rs.getString(10),
                         rs.getString(11));
