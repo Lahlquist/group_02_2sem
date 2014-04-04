@@ -17,14 +17,15 @@ import java.util.List;
 public class Controller
 {
 
+    //FiELDS
     DBFacade facade = new DBFacade();
     private List<Gaest> currentgListe;
     private List<Lejlighed> currentlListe;
     private Gaest gaest;
     private Gaest currentgaeid;
-    //TEST
     private ArrayList<Booking> currentARListe;
 
+    //CONSTRUCTOR
     public Controller()
     {
         currentgListe = null;
@@ -32,11 +33,11 @@ public class Controller
         gaest = null;
         currentgaeid = null;
         //TEST
-        currentARListe = null;
-        
-        
+        currentARListe = null;                
     }
 
+    
+        
     public List<Gaest> getGaesteListe()
     {
         currentgListe = facade.getGaesteListe();
@@ -63,9 +64,6 @@ public class Controller
     public boolean tjekLogind(String brugernavn, String kode){
         return (facade.tjekLogind(brugernavn, kode));
     }
-    
-    
-    // ANDERS - NYT
     
     
     // antal lejligheder ledige i given periode.

@@ -12,11 +12,14 @@ package domain;
 
 public class Booking
 {
+    
+    //FIELDS
     String booking_id;
     int    lejlighed_id;
     String checkIn;
     String checkUd;
     
+    //CONSTRUCTOR
     public Booking(String booking_id, int lejlighed_id, String checkIn, String checkUd)
     {
     this.booking_id    = booking_id;
@@ -25,6 +28,9 @@ public class Booking
     this.checkUd       = checkUd;    
     }
 
+    
+    
+    
     public String getBooking_id() {
         return booking_id;
     }

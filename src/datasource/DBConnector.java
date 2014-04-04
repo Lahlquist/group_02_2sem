@@ -16,10 +16,13 @@ import java.sql.SQLException;
 
 public class DBConnector {
 
+  //FIELDS
   private static final String id = "SEM2_GR02"; //Insert ORACLE id and password
   private static final String pw = "SEM2_GR02";
   private static Connection connection;
 
+  
+  
   private static void intializeConnection() {
     try {
       connection = DriverManager.getConnection("jdbc:oracle:thin:@datdb.cphbusiness.dk:1521:dat", id, pw);
