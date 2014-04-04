@@ -1,5 +1,9 @@
 package presentation;
 
+import java.awt.CardLayout;
+import java.awt.Component;
+import javax.swing.JPanel;
+
 /**
  * Semesterprojekt - "Casablanca Holiday Center"
  * 2. semester 2014
@@ -12,11 +16,28 @@ package presentation;
 
 public class GUIGaest extends javax.swing.JFrame {
 
+    private CardLayout layCard;
+    
     public GUIGaest() {
         initComponents();
         setLocationRelativeTo(null);
+        
+        layCard = new CardLayout();
+        PanCard.setLayout(layCard);
+        PanCard.add("BookEnSportsfacilitet", jPanel2_BookEnSportsfacilitet);
+        PanCard.add("MineBookinger", jPanel3_MineBookinger);
     }
 
+    public void goBookSportsfacilitet()
+    {
+        layCard.show(PanCard, "BookEnSportsfacilitet");
+    }
+    
+    public void goMineBookinger()
+    {
+        layCard.show(PanCard, "MineBookinger");
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -24,76 +45,230 @@ public class GUIGaest extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
+        jPanel1 = new javax.swing.JPanel();
+        PanCard = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jButton1_BookEnSportsfacilitet = new javax.swing.JButton();
+        jButton1_MineBookinger = new javax.swing.JButton();
+        jPanel2_BookEnSportsfacilitet = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel3_MineBookinger = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Gæst");
+        jPanel1.setLayout(new java.awt.CardLayout());
+
+        jLabel1.setText("Panel 1");
+
+        jButton1_BookEnSportsfacilitet.setText("BOOK EN SPORTSFACILITET");
+        jButton1_BookEnSportsfacilitet.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jButton1_BookEnSportsfacilitetActionPerformed(evt);
+            }
+        });
+
+        jButton1_MineBookinger.setText("MINE BOOKINGER");
+        jButton1_MineBookinger.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jButton1_MineBookingerActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(219, 219, 219)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(jButton1_BookEnSportsfacilitet))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(77, 77, 77)
+                        .addComponent(jButton1_MineBookinger)))
+                .addContainerGap(504, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(81, 81, 81)
+                .addComponent(jButton1_BookEnSportsfacilitet)
+                .addGap(89, 89, 89)
+                .addComponent(jLabel1)
+                .addGap(151, 151, 151)
+                .addComponent(jButton1_MineBookinger)
+                .addContainerGap(161, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout PanCardLayout = new javax.swing.GroupLayout(PanCard);
+        PanCard.setLayout(PanCardLayout);
+        PanCardLayout.setHorizontalGroup(
+            PanCardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        PanCardLayout.setVerticalGroup(
+            PanCardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(PanCard, "card1");
+
+        jLabel2.setText("Panel 2");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(386, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(337, 337, 337))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(238, 238, 238)
+                .addComponent(jLabel2)
+                .addContainerGap(302, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel2_BookEnSportsfacilitetLayout = new javax.swing.GroupLayout(jPanel2_BookEnSportsfacilitet);
+        jPanel2_BookEnSportsfacilitet.setLayout(jPanel2_BookEnSportsfacilitetLayout);
+        jPanel2_BookEnSportsfacilitetLayout.setHorizontalGroup(
+            jPanel2_BookEnSportsfacilitetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel2_BookEnSportsfacilitetLayout.setVerticalGroup(
+            jPanel2_BookEnSportsfacilitetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(jPanel2_BookEnSportsfacilitet, "card2");
+
+        jLabel3.setText("Panel 3");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(300, 300, 300)
+                .addComponent(jLabel3)
+                .addContainerGap(423, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(224, 224, 224)
+                .addComponent(jLabel3)
+                .addContainerGap(316, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel3_MineBookingerLayout = new javax.swing.GroupLayout(jPanel3_MineBookinger);
+        jPanel3_MineBookinger.setLayout(jPanel3_MineBookingerLayout);
+        jPanel3_MineBookingerLayout.setHorizontalGroup(
+            jPanel3_MineBookingerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel3_MineBookingerLayout.setVerticalGroup(
+            jPanel3_MineBookingerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(jPanel3_MineBookinger, "card3");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(129, 129, 129)
-                .addComponent(jLabel1)
-                .addContainerGap(245, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(74, 74, 74)
-                .addComponent(jLabel1)
-                .addContainerGap(212, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-//         */
-//        try
-//        {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels())
-//            {
-//                if ("Nimbus".equals(info.getName()))
-//                {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex)
-//        {
-//            java.util.logging.Logger.getLogger(GUIGaest.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex)
-//        {
-//            java.util.logging.Logger.getLogger(GUIGaest.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex)
-//        {
-//            java.util.logging.Logger.getLogger(GUIGaest.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex)
-//        {
-//            java.util.logging.Logger.getLogger(GUIGaest.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-//
-//        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new GUIGaest().setVisible(true);
-//            }
-//        });
-//    }
+    private void jButton1_BookEnSportsfacilitetActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton1_BookEnSportsfacilitetActionPerformed
+    {//GEN-HEADEREND:event_jButton1_BookEnSportsfacilitetActionPerformed
+        //
+        goBookSportsfacilitet();
+        
+    }//GEN-LAST:event_jButton1_BookEnSportsfacilitetActionPerformed
+
+    private void jButton1_MineBookingerActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton1_MineBookingerActionPerformed
+    {//GEN-HEADEREND:event_jButton1_MineBookingerActionPerformed
+        //
+        goMineBookinger();
+        
+    }//GEN-LAST:event_jButton1_MineBookingerActionPerformed
+
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try
+        {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels())
+            {
+                if ("Nimbus".equals(info.getName()))
+                {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex)
+        {
+            java.util.logging.Logger.getLogger(GUIGaest.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex)
+        {
+            java.util.logging.Logger.getLogger(GUIGaest.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex)
+        {
+            java.util.logging.Logger.getLogger(GUIGaest.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex)
+        {
+            java.util.logging.Logger.getLogger(GUIGaest.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new GUIGaest().setVisible(true);
+            }
+        });
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel PanCard;
+    private javax.swing.JButton jButton1_BookEnSportsfacilitet;
+    private javax.swing.JButton jButton1_MineBookinger;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel2_BookEnSportsfacilitet;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel3_MineBookinger;
+    private javax.swing.JPanel jPanel4;
     // End of variables declaration//GEN-END:variables
 }

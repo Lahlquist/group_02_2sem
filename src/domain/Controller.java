@@ -21,6 +21,7 @@ public class Controller
     private List<Gaest> currentgListe;
     private List<Lejlighed> currentlListe;
     private Gaest gaest;
+    private Gaest currentgaeid;
     //TEST
     private ArrayList<Booking> currentARListe;
 
@@ -29,9 +30,10 @@ public class Controller
         currentgListe = null;
         currentlListe = null;
         gaest = null;
-       
+        currentgaeid = null;
         //TEST
         currentARListe = null;
+        
         
     }
 
@@ -84,6 +86,21 @@ public class Controller
         }
         return gaest;
     }
+
+    public void UpdateGaest(String text)
+    {
+        return;
+    }
+
+    public Gaest GetGaest(int gaeid)
+    {
+
+        currentgaeid = facade.GetGaest(gaeid);
+
+        return currentgaeid;
+    }
+
+
     
     
     

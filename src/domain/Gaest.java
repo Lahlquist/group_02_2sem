@@ -45,10 +45,13 @@ public class Gaest
         rejsebureau = rbu;
         
         gæsteListe = new ArrayList<Gaest>();
-
-        
-        
     }
+
+    Gaest(int gaeid)
+    {
+        gaestid = gaeid;
+    }
+    
 
 
     public int getGaestid()

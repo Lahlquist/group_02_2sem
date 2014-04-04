@@ -8,22 +8,20 @@ import domain.Controller;
 import domain.Gaest;
 
 /**
- * Semesterprojekt - "Casablanca Holiday Center"
- * 2. semester 2014
- * 
- * Udarbejdet af:
- * Emil, Anders, Søren og Laura
- * 
+ * Semesterprojekt - "Casablanca Holiday Center" 2. semester 2014
+ *
+ * Udarbejdet af: Emil, Anders, Søren og Laura
+ *
  * Torsdag den 1. maj 2014 #Part 1
  */
-
 public class GUIMedarbejder extends javax.swing.JFrame
 {
+
     private String roomTypeChoosen;
     private Controller c = new Controller();
     int count = 0;
+
     public GUIMedarbejder()
-     
     {
         initComponents();
     }
@@ -90,35 +88,37 @@ public class GUIMedarbejder extends javax.swing.JFrame
         jLabel31 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
-        jTextFieldEfternavn2 = new javax.swing.JTextField();
-        jTextFieldFornavn2 = new javax.swing.JTextField();
-        jTextFieldLand2 = new javax.swing.JTextField();
-        jTextFieldEmail2 = new javax.swing.JTextField();
+        jTextFieldEfternavnRSG = new javax.swing.JTextField();
+        jTextFieldFornavnRSG = new javax.swing.JTextField();
+        jTextFieldLandRSG = new javax.swing.JTextField();
+        jTextFieldEmailRSG = new javax.swing.JTextField();
         jLabel34 = new javax.swing.JLabel();
-        jTextFieldTelefonnummer2 = new javax.swing.JTextField();
+        jTextFieldTelefonnummerRSG = new javax.swing.JTextField();
         jLabel35 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        jButtonRedigerGaest = new javax.swing.JButton();
         jLabel36 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
-        jTextfieldPostnummer2 = new javax.swing.JTextField();
-        jTextfieldRejsebureau2 = new javax.swing.JTextField();
-        jTextfieldVejnavn2 = new javax.swing.JTextField();
+        jTextfieldPostnummerRSG = new javax.swing.JTextField();
+        jTextfieldRejsebureauRSG = new javax.swing.JTextField();
+        jTextfieldVejnavnRSG = new javax.swing.JTextField();
         jDateChooserCheckind1 = new com.toedter.calendar.JDateChooser();
         jLabelInfo2 = new javax.swing.JLabel();
         jDateChooserCheckud1 = new com.toedter.calendar.JDateChooser();
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
-        jTextfieldVejnummer2 = new javax.swing.JTextField();
-        jTextFieldLejlighedsID1 = new javax.swing.JTextField();
+        jTextfieldVejnummerRSG = new javax.swing.JTextField();
+        jTextFieldLejlighedsIDRSG = new javax.swing.JTextField();
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
-        jTextfieldBynavn2 = new javax.swing.JTextField();
+        jTextfieldBynavnRSG = new javax.swing.JTextField();
         jLabel44 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        jButtonSletGaest = new javax.swing.JButton();
         jLabel45 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        jTextFieldGaestID = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jLabelHentGaest = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -217,15 +217,12 @@ public class GUIMedarbejder extends javax.swing.JFrame
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 1166, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(158, 158, 158)
-                                .addComponent(jLabelInfoOversigt))
-                            .addComponent(jButtonGetGuestList))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(158, 158, 158)
+                        .addComponent(jLabelInfoOversigt))
+                    .addComponent(jButtonGetGuestList)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 816, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(351, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -336,9 +333,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addGap(412, 412, 412))
+                            .addComponent(jLabel6)
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel1)
@@ -352,22 +347,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
                                     .addComponent(jTextFieldLand, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextFieldFornavn, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextfieldBynavn, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextfieldVejnavn, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 343, Short.MAX_VALUE)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel9)
-                                    .addComponent(jLabel12)
-                                    .addComponent(jLabel13))
-                                .addGap(38, 38, 38)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextFieldTelefonnummer, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextfieldRejsebureau, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextfieldPostnummer, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextfieldVejnummer, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(292, 292, 292))
+                                    .addComponent(jTextfieldVejnavn, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
@@ -387,77 +367,104 @@ public class GUIMedarbejder extends javax.swing.JFrame
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGap(82, 82, 82)
                                 .addComponent(jLabelInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(78, 78, 78)
+                        .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel13))
+                        .addGap(38, 38, 38)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldTelefonnummer, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextfieldRejsebureau, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextfieldPostnummer, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextfieldVejnummer, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(259, 259, 259))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(272, 272, 272)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButtonBekræftBooking)
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 437, Short.MAX_VALUE)
-                                .addComponent(jButtonBekræftBooking)
-                                .addGap(33, 33, 33))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(78, 78, 78)
-                                .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 298, Short.MAX_VALUE)
                                 .addComponent(jLabel14)
                                 .addGap(18, 18, 18)
                                 .addComponent(jButtonCheckudsigt)
-                                .addGap(66, 66, 66))))))
+                                .addGap(33, 33, 33)))))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel7)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButtonCheckudsigt)
-                        .addComponent(jLabel14)
-                        .addComponent(jLabel8))
-                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(SingleRumBtn)
-                    .addComponent(FamilieRumBtn)
-                    .addComponent(DobbeltRumBtn))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 183, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldFornavn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldEfternavn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextFieldTelefonnummer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldLand, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextfieldRejsebureau, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9))
-                .addGap(26, 26, 26)
-                .addComponent(jLabel6)
-                .addGap(20, 20, 20)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextfieldBynavn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextfieldPostnummer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel12))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextfieldVejnavn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextfieldVejnummer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel13))
+                .addGap(21, 21, 21)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButtonCheckudsigt)
+                            .addComponent(jLabel14))
+                        .addGap(224, 224, 224)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldTelefonnummer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextfieldRejsebureau, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9))
+                        .addGap(62, 62, 62)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextfieldPostnummer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel12))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextfieldVejnummer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel13))
                         .addGap(2, 2, 2)
-                        .addComponent(jButtonBekræftBooking))
+                        .addComponent(jButtonBekræftBooking)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel8)
+                            .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(SingleRumBtn)
+                            .addComponent(FamilieRumBtn)
+                            .addComponent(DobbeltRumBtn))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 183, Short.MAX_VALUE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldFornavn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldEfternavn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldLand, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3))
+                        .addGap(26, 26, 26)
+                        .addComponent(jLabel6)
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextfieldBynavn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel10))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextfieldVejnavn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabelInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(22, 22, 22))
+                        .addComponent(jLabelInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(22, 22, 22))))
         );
 
         jTabbedPane1.addTab("Booking af Værelse", jPanel3);
@@ -501,11 +508,9 @@ public class GUIMedarbejder extends javax.swing.JFrame
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1166, Short.MAX_VALUE)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jButtonHentOversigt)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                    .addComponent(jButtonHentOversigt)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 725, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(442, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -527,11 +532,11 @@ public class GUIMedarbejder extends javax.swing.JFrame
 
         jLabel33.setText("Fornavn:");
 
-        jTextFieldFornavn2.addActionListener(new java.awt.event.ActionListener()
+        jTextFieldFornavnRSG.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                jTextFieldFornavn2ActionPerformed(evt);
+                jTextFieldFornavnRSGActionPerformed(evt);
             }
         });
 
@@ -539,7 +544,14 @@ public class GUIMedarbejder extends javax.swing.JFrame
 
         jLabel35.setText("Vejnummer:");
 
-        jButton2.setText("Rediger Gæst");
+        jButtonRedigerGaest.setText("Rediger Gæst");
+        jButtonRedigerGaest.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jButtonRedigerGaestActionPerformed(evt);
+            }
+        });
 
         jLabel36.setText("Rejsebureau:");
 
@@ -560,9 +572,18 @@ public class GUIMedarbejder extends javax.swing.JFrame
 
         jLabel44.setText("Land:");
 
-        jButton3.setText("Slet Gæst");
+        jButtonSletGaest.setText("Slet Gæst");
 
         jLabel45.setText("Gæst ID:");
+
+        jButton1.setText("Hent Gæst");
+        jButton1.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -575,12 +596,12 @@ public class GUIMedarbejder extends javax.swing.JFrame
                         .addComponent(jLabel37)
                         .addGap(724, 724, 724))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addComponent(jLabel42)
-                                .addGap(35, 35, 35)
-                                .addComponent(jDateChooserCheckind1, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                                .addComponent(jDateChooserCheckind1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel32)
                                     .addComponent(jLabel44)
@@ -590,14 +611,16 @@ public class GUIMedarbejder extends javax.swing.JFrame
                                     .addComponent(jLabel45))
                                 .addGap(38, 38, 38)
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextFieldEfternavn2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                    .addComponent(jTextFieldLand2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                    .addComponent(jTextFieldFornavn2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                    .addComponent(jTextfieldBynavn2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                    .addComponent(jTextfieldVejnavn2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                    .addComponent(jTextField2))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 412, Short.MAX_VALUE)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextFieldEfternavnRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldLandRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldFornavnRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                    .addComponent(jTextfieldBynavnRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                    .addComponent(jTextfieldVejnavnRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldGaestID))))
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1)
+                        .addGap(290, 290, 290)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel43)
@@ -607,88 +630,93 @@ public class GUIMedarbejder extends javax.swing.JFrame
                                     .addComponent(jLabel35)
                                     .addComponent(jLabel40))
                                 .addGap(38, 38, 38)
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jDateChooserCheckud1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextFieldEmail2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                    .addComponent(jTextFieldTelefonnummer2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                    .addComponent(jTextfieldRejsebureau2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                    .addComponent(jTextfieldPostnummer2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                    .addComponent(jTextfieldVejnummer2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)))
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jTextFieldEmailRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                        .addComponent(jTextFieldTelefonnummerRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                        .addComponent(jTextfieldRejsebureauRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                        .addComponent(jTextfieldPostnummerRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                        .addComponent(jTextfieldVejnummerRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE))
+                                    .addComponent(jDateChooserCheckud1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jLabel31)
                             .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addComponent(jLabel30)
                                 .addGap(48, 48, 48)
-                                .addComponent(jTextFieldLejlighedsID1)))
-                        .addGap(312, 312, 312))
+                                .addComponent(jTextFieldLejlighedsIDRSG, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(1501, 1501, 1501))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(72, 72, 72)
+                        .addComponent(jLabelHentGaest)
+                        .addGap(32, 32, 32)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGap(203, 203, 203)
-                                .addComponent(jButton2)
-                                .addGap(99, 99, 99)
-                                .addComponent(jButton3)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addComponent(jLabelInfo2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(734, 734, 734))))))
+                                .addGap(734, 734, 734))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGap(203, 203, 203)
+                                .addComponent(jButtonRedigerGaest)
+                                .addGap(99, 99, 99)
+                                .addComponent(jButtonSletGaest)
+                                .addGap(0, 0, Short.MAX_VALUE))))))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(76, Short.MAX_VALUE)
+                .addContainerGap(70, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel42, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jDateChooserCheckind1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel40, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jDateChooserCheckud1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(54, 54, 54)
+                .addGap(29, 29, 29)
                 .addComponent(jLabel31)
-                .addGap(18, 18, 18)
+                .addGap(12, 12, 12)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel30)
                         .addComponent(jLabel45)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTextFieldLejlighedsID1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                        .addComponent(jTextFieldGaestID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton1))
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldLejlighedsIDRSG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel30)))
+                .addGap(52, 52, 52)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldFornavn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldFornavnRSG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel33)
-                    .addComponent(jTextFieldEmail2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldEmailRSG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel39))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldEfternavn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldEfternavnRSG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel32)
-                    .addComponent(jTextFieldTelefonnummer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldTelefonnummerRSG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel43))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldLand2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldLandRSG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel44)
-                    .addComponent(jTextfieldRejsebureau2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextfieldRejsebureauRSG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel36))
                 .addGap(26, 26, 26)
                 .addComponent(jLabel37)
                 .addGap(20, 20, 20)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextfieldBynavn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextfieldPostnummer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextfieldBynavnRSG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextfieldPostnummerRSG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel38)
                     .addComponent(jLabel34))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextfieldVejnavn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextfieldVejnummer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextfieldVejnavnRSG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextfieldVejnummerRSG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel41)
                     .addComponent(jLabel35))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelInfo2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(jButtonRedigerGaest)
+                    .addComponent(jButtonSletGaest)
+                    .addComponent(jLabelHentGaest))
                 .addGap(33, 33, 33))
         );
 
@@ -749,61 +777,55 @@ public class GUIMedarbejder extends javax.swing.JFrame
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jLabel26)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jPanel6Layout.createSequentialGroup()
+                            .addComponent(jLabel28)
+                            .addGap(35, 35, 35)
+                            .addComponent(jDateChooserCheckind, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createSequentialGroup()
                             .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel6Layout.createSequentialGroup()
-                                    .addComponent(jLabel19)
-                                    .addGap(412, 412, 412))
-                                .addGroup(jPanel6Layout.createSequentialGroup()
-                                    .addComponent(jLabel27)
-                                    .addGap(0, 0, Short.MAX_VALUE))
-                                .addGroup(jPanel6Layout.createSequentialGroup()
-                                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addGroup(jPanel6Layout.createSequentialGroup()
-                                            .addComponent(jLabel28)
-                                            .addGap(35, 35, 35)
-                                            .addComponent(jDateChooserCheckind, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createSequentialGroup()
-                                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jLabel25)
-                                                .addComponent(jLabel24)
-                                                .addComponent(jLabel17)
-                                                .addComponent(jLabel21)
-                                                .addComponent(jLabel22))
-                                            .addGap(38, 38, 38)
-                                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(jTextFieldEfternavn1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                                .addComponent(jTextFieldLand1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                                .addComponent(jTextFieldFornavn1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                                .addComponent(jTextfieldBynavn1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                                .addComponent(jTextfieldVejnavn1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                                .addComponent(jTextFieldLejlighedsID))))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 412, Short.MAX_VALUE)
-                                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel16)
-                                        .addComponent(jLabel15)
-                                        .addComponent(jLabel20)
-                                        .addComponent(jLabel23)
-                                        .addComponent(jLabel18)
-                                        .addComponent(jLabel29)
-                                        .addComponent(jLabelGæstoprettetinfo))
-                                    .addGap(38, 38, 38)
-                                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jDateChooserCheckud, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jTextFieldEmail1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                        .addComponent(jTextFieldTelefonnummer1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                        .addComponent(jTextfieldRejsebureau1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                        .addComponent(jTextfieldPostnummer1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                        .addComponent(jTextfieldVejnummer1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE))))
-                            .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addGap(72, 72, 72)
-                                .addComponent(jLabelInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(422, 422, 422)))
-                        .addGap(312, 312, 312))))
+                                .addComponent(jLabel25)
+                                .addComponent(jLabel24)
+                                .addComponent(jLabel17)
+                                .addComponent(jLabel21)
+                                .addComponent(jLabel22))
+                            .addGap(38, 38, 38)
+                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jTextFieldEfternavn1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                .addComponent(jTextFieldLand1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                .addComponent(jTextFieldFornavn1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                .addComponent(jTextfieldBynavn1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                .addComponent(jTextfieldVejnavn1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                .addComponent(jTextFieldLejlighedsID))))
+                    .addComponent(jLabel26)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(72, 72, 72)
+                        .addComponent(jLabelInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel19)
+                    .addComponent(jLabel27))
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 715, Short.MAX_VALUE)
+                        .addComponent(jLabelGæstoprettetinfo)
+                        .addGap(231, 231, 231))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(435, 435, 435)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel16)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel20)
+                            .addComponent(jLabel23)
+                            .addComponent(jLabel18)
+                            .addComponent(jLabel29))
+                        .addGap(38, 38, 38)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jDateChooserCheckud, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jTextFieldEmail1)
+                            .addComponent(jTextFieldTelefonnummer1)
+                            .addComponent(jTextfieldRejsebureau1)
+                            .addComponent(jTextfieldPostnummer1)
+                            .addComponent(jTextfieldVejnummer1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(280, Short.MAX_VALUE))))
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(415, 415, 415)
                 .addComponent(jButtonOpretGæst)
@@ -815,49 +837,63 @@ public class GUIMedarbejder extends javax.swing.JFrame
                 .addContainerGap(76, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel28, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jDateChooserCheckind, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel29, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jDateChooserCheckud, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(54, 54, 54)
-                .addComponent(jLabel27)
-                .addGap(18, 18, 18)
+                    .addComponent(jDateChooserCheckind, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel26)
-                    .addComponent(jTextFieldLejlighedsID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldFornavn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel25)
-                    .addComponent(jTextFieldEmail1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel15))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldEfternavn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel24)
-                    .addComponent(jTextFieldTelefonnummer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel16))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldLand1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel17)
-                    .addComponent(jTextfieldRejsebureau1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel20))
-                .addGap(26, 26, 26)
-                .addComponent(jLabel19)
-                .addGap(20, 20, 20)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextfieldBynavn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextfieldPostnummer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel21)
-                    .addComponent(jLabel23))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextfieldVejnavn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextfieldVejnummer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel22)
-                    .addComponent(jLabel18))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabelInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel27)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel26)
+                            .addComponent(jTextFieldLejlighedsID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldFornavn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel25))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldEfternavn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel24))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldLand1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel17))
+                        .addGap(26, 26, 26)
+                        .addComponent(jLabel19)
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextfieldBynavn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel21))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextfieldVejnavn1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel22))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabelInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel29, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jDateChooserCheckud, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(124, 124, 124)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldEmail1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel15))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldTelefonnummer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel16))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextfieldRejsebureau1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel20))
+                        .addGap(62, 62, 62)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextfieldPostnummer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel23))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextfieldVejnummer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel18))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonOpretGæst)
@@ -873,44 +909,24 @@ public class GUIMedarbejder extends javax.swing.JFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1)
-                .addContainerGap())
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 585, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonOpretGæstActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonOpretGæstActionPerformed
-    {//GEN-HEADEREND:event_jButtonOpretGæstActionPerformed
-        int tlfno = Integer.parseInt(jTextFieldTelefonnummer1.getText());
-        int vno = Integer.parseInt(jTextfieldVejnummer1.getText());
-        int pno = Integer.parseInt(jTextfieldPostnummer1.getText());
-        //     jTextFieldFornavn.getText();
-        //     jTextFieldEfternavn.getText();
-        //     jTextFieldLand.getText();
-        //     jTextFieldEmail.getText();
-        //     jTextfieldAntalnætter.getText();
-
-        Gaest status = c.createNewGaest(count, jTextFieldFornavn1.getText(), jTextFieldEfternavn1.getText(), tlfno, jTextFieldEmail1.getText(), jTextfieldVejnavn1.getText(), vno, pno, jTextfieldBynavn1.getText(), jTextFieldLand1.getText(), jTextfieldRejsebureau1.getText());
-        jLabelGæstoprettetinfo.setText("Gæst Oprettet!") ;
-    }//GEN-LAST:event_jButtonOpretGæstActionPerformed
-
-    private void jTextFieldFornavn1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jTextFieldFornavn1ActionPerformed
-    {//GEN-HEADEREND:event_jTextFieldFornavn1ActionPerformed
+    private void jTextFieldFornavnRSGActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jTextFieldFornavnRSGActionPerformed
+    {//GEN-HEADEREND:event_jTextFieldFornavnRSGActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldFornavn1ActionPerformed
-
-    private void jTextFieldFornavn2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jTextFieldFornavn2ActionPerformed
-    {//GEN-HEADEREND:event_jTextFieldFornavn2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldFornavn2ActionPerformed
+    }//GEN-LAST:event_jTextFieldFornavnRSGActionPerformed
 
     private void jButtonHentOversigtActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonHentOversigtActionPerformed
     {//GEN-HEADEREND:event_jButtonHentOversigtActionPerformed
@@ -927,7 +943,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
         String xFormat = format.format(x);
         String yFormat = format.format(y);
 
-        jLabel14.setText(Integer.toString(c.getRoomsList(xFormat, yFormat, roomTypeChoosen )));
+        jLabel14.setText(Integer.toString(c.getRoomsList(xFormat, yFormat, roomTypeChoosen)));
     }//GEN-LAST:event_jButtonCheckudsigtActionPerformed
 
     private void jButtonBekræftBookingActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonBekræftBookingActionPerformed
@@ -942,7 +958,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
         //     jTextfieldAntalnætter.getText();
 
         Gaest status = c.createNewBooking(count, jTextFieldFornavn.getText(), jTextFieldEfternavn.getText(), tlfno, jTextFieldEmail.getText(), jTextfieldVejnavn.getText(), vno, pno, jTextfieldBynavn.getText(), jTextFieldLand.getText(), jTextfieldRejsebureau.getText());
-        jLabelInfo.setText("Gæst Oprettet!") ;
+        jLabelInfo.setText("Gæst Oprettet!");
     }//GEN-LAST:event_jButtonBekræftBookingActionPerformed
 
     private void DobbeltRumBtnActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_DobbeltRumBtnActionPerformed
@@ -969,9 +985,9 @@ public class GUIMedarbejder extends javax.swing.JFrame
     {//GEN-HEADEREND:event_jButtonGetGuestListActionPerformed
 
         jLabelInfoOversigt.setText("Oversigt hentet!");
-        DefaultTableModel Gaesteliste =(DefaultTableModel)GaesteListen.getModel();
+        DefaultTableModel Gaesteliste = (DefaultTableModel) GaesteListen.getModel();
         List<Gaest> gaesteListe = c.getGaesteListe();
-        for(Gaest g : gaesteListe)
+        for (Gaest g : gaesteListe)
         {
             Gaesteliste.addRow(new Object[]
             {
@@ -992,6 +1008,51 @@ public class GUIMedarbejder extends javax.swing.JFrame
 
     }//GEN-LAST:event_jButtonGetGuestListActionPerformed
 
+    private void jButtonRedigerGaestActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonRedigerGaestActionPerformed
+    {//GEN-HEADEREND:event_jButtonRedigerGaestActionPerformed
+        c.UpdateGaest(jTextFieldGaestID.getText());
+    }//GEN-LAST:event_jButtonRedigerGaestActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton1ActionPerformed
+    {//GEN-HEADEREND:event_jButton1ActionPerformed
+        int gid = Integer.parseInt(jTextFieldGaestID.getText());
+        Gaest giid = c.GetGaest(gid);
+        if (giid != null)
+        {
+            jTextFieldFornavnRSG.setText(giid.getFornavn());
+            jTextFieldEfternavnRSG.setText(giid.getEfternavn());
+            jTextFieldEmailRSG.setText(giid.getEmail());
+            jTextFieldLandRSG.setText(giid.getLand());
+            jTextFieldTelefonnummerRSG.setText(giid.getTelefonnummer()+"");
+            jTextfieldBynavnRSG.setText(giid.getBynavn());
+            jTextfieldPostnummerRSG.setText(giid.getPostnummer()+"");
+            jTextfieldRejsebureauRSG.setText(giid.getRejsebureau());
+            jTextfieldVejnavnRSG.setText(giid.getVejnavn());
+            jTextfieldVejnummerRSG.setText(giid.getVejnummer()+"");   
+        }
+        else 
+            jLabelHentGaest.setText("Ingen Gæst med dette ID er fundet");
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButtonOpretGæstActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonOpretGæstActionPerformed
+    {//GEN-HEADEREND:event_jButtonOpretGæstActionPerformed
+        int tlfno = Integer.parseInt(jTextFieldTelefonnummer1.getText());
+        int vno = Integer.parseInt(jTextfieldVejnummer1.getText());
+        int pno = Integer.parseInt(jTextfieldPostnummer1.getText());
+        //     jTextFieldFornavn.getText();
+        //     jTextFieldEfternavn.getText();
+        //     jTextFieldLand.getText();
+        //     jTextFieldEmail.getText();
+        //     jTextfieldAntalnætter.getText();
+
+        Gaest status = c.createNewGaest(count, jTextFieldFornavn1.getText(), jTextFieldEfternavn1.getText(), tlfno, jTextFieldEmail1.getText(), jTextfieldVejnavn1.getText(), vno, pno, jTextfieldBynavn1.getText(), jTextFieldLand1.getText(), jTextfieldRejsebureau1.getText());
+        jLabelGæstoprettetinfo.setText("Gæst Oprettet!");
+    }//GEN-LAST:event_jButtonOpretGæstActionPerformed
+
+    private void jTextFieldFornavn1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jTextFieldFornavn1ActionPerformed
+    {//GEN-HEADEREND:event_jTextFieldFornavn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldFornavn1ActionPerformed
 
     public static void main(String args[])
     {
@@ -1042,13 +1103,14 @@ public class GUIMedarbejder extends javax.swing.JFrame
     private javax.swing.JRadioButton SingleRumBtn;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonBekræftBooking;
     private javax.swing.JButton jButtonCheckudsigt;
     private javax.swing.JButton jButtonGetGuestList;
     private javax.swing.JButton jButtonHentOversigt;
     private javax.swing.JButton jButtonOpretGæst;
+    private javax.swing.JButton jButtonRedigerGaest;
+    private javax.swing.JButton jButtonSletGaest;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private com.toedter.calendar.JDateChooser jDateChooser2;
     private com.toedter.calendar.JDateChooser jDateChooserCheckind;
@@ -1101,6 +1163,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelGæstoprettetinfo;
+    private javax.swing.JLabel jLabelHentGaest;
     private javax.swing.JLabel jLabelInfo;
     private javax.swing.JLabel jLabelInfo1;
     private javax.swing.JLabel jLabelInfo2;
@@ -1120,39 +1183,39 @@ public class GUIMedarbejder extends javax.swing.JFrame
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextFieldEfternavn;
     private javax.swing.JTextField jTextFieldEfternavn1;
-    private javax.swing.JTextField jTextFieldEfternavn2;
+    private javax.swing.JTextField jTextFieldEfternavnRSG;
     private javax.swing.JTextField jTextFieldEmail;
     private javax.swing.JTextField jTextFieldEmail1;
-    private javax.swing.JTextField jTextFieldEmail2;
+    private javax.swing.JTextField jTextFieldEmailRSG;
     private javax.swing.JTextField jTextFieldFornavn;
     private javax.swing.JTextField jTextFieldFornavn1;
-    private javax.swing.JTextField jTextFieldFornavn2;
+    private javax.swing.JTextField jTextFieldFornavnRSG;
+    private javax.swing.JTextField jTextFieldGaestID;
     private javax.swing.JTextField jTextFieldLand;
     private javax.swing.JTextField jTextFieldLand1;
-    private javax.swing.JTextField jTextFieldLand2;
+    private javax.swing.JTextField jTextFieldLandRSG;
     private javax.swing.JTextField jTextFieldLejlighedsID;
-    private javax.swing.JTextField jTextFieldLejlighedsID1;
+    private javax.swing.JTextField jTextFieldLejlighedsIDRSG;
     private javax.swing.JTextField jTextFieldTelefonnummer;
     private javax.swing.JTextField jTextFieldTelefonnummer1;
-    private javax.swing.JTextField jTextFieldTelefonnummer2;
+    private javax.swing.JTextField jTextFieldTelefonnummerRSG;
     private javax.swing.JTextField jTextfieldBynavn;
     private javax.swing.JTextField jTextfieldBynavn1;
-    private javax.swing.JTextField jTextfieldBynavn2;
+    private javax.swing.JTextField jTextfieldBynavnRSG;
     private javax.swing.JTextField jTextfieldPostnummer;
     private javax.swing.JTextField jTextfieldPostnummer1;
-    private javax.swing.JTextField jTextfieldPostnummer2;
+    private javax.swing.JTextField jTextfieldPostnummerRSG;
     private javax.swing.JTextField jTextfieldRejsebureau;
     private javax.swing.JTextField jTextfieldRejsebureau1;
-    private javax.swing.JTextField jTextfieldRejsebureau2;
+    private javax.swing.JTextField jTextfieldRejsebureauRSG;
     private javax.swing.JTextField jTextfieldVejnavn;
     private javax.swing.JTextField jTextfieldVejnavn1;
-    private javax.swing.JTextField jTextfieldVejnavn2;
+    private javax.swing.JTextField jTextfieldVejnavnRSG;
     private javax.swing.JTextField jTextfieldVejnummer;
     private javax.swing.JTextField jTextfieldVejnummer1;
-    private javax.swing.JTextField jTextfieldVejnummer2;
+    private javax.swing.JTextField jTextfieldVejnummerRSG;
     // End of variables declaration//GEN-END:variables
 }
