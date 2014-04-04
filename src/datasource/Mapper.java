@@ -207,13 +207,6 @@ public class Mapper
         
     }
     
-    
-    
-    
-// ANDERS - NYT -
-    
-    
-    // plus alle de lejligheder som ikke er booket i fremtiden eller nu.
     public ArrayList getRooms(String x, String y, String w) {
         
         ledig_id.clear();
@@ -282,39 +275,6 @@ public class Mapper
         return ledig_id;
     }
 }
-    // INSRET INTO BOOKEDE_LEJLIGHED_TBL. - (skal måske 'merges' med createNewBooking).
-    public boolean roomBooking(Booking a) { 
-        int rowsInserted = 0;
-        String SQLStringBooking = "insert into BOOKEDE_LEJLIGHED_TBL "
-                + "values (?,?,?,?)";
-        
-         PreparedStatement statement = null;
-  
-         try {
-         statement = con.prepareStatement(SQLStringBooking);   
-         statement.setString(1, null);
-         statement.setInt   (2, a.getLejlighed_id());
-         statement.setString(3, a.getCheckIn());
-         statement.setString(4, a.getCheckUd());
-         
-         rowsInserted = statement.executeUpdate();
-         }
-         catch(Exception e) {             
-             System.out.println(e.getMessage());
-         }
-         finally
-        {
-            try
-            {
-                statement.close();
-            } catch (SQLException e)
-            {
-                System.out.println("Fejler i mapper - roomBooking");
-            }
-        }
-        return rowsInserted == 1;
-    }
-  
     
     //skal udvælge en lejlighed til currentGæst.
     public int tildelLejlighed() {
@@ -425,6 +385,5 @@ public class Mapper
       }
     } return g;
     }
-   
-    }
+}
 
