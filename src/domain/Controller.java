@@ -100,6 +100,14 @@ public class Controller
         return currentgaeid;
     }
 
+    public boolean UpdateGaest(int gaeid, String fnavn, String enavn, int telnu, String mail, String vnavn, int vno, int pno, String bnavn, String land, String rbu)
+    {
+        
+        boolean status = facade.UpdateGaest(gaest);
+        return status;
+    }
+
+
 
     
     

@@ -407,7 +407,7 @@ public class Mapper
                         
                         }
       } catch (SQLException e) {
-      System.out.println("Fail in OrderMapper - getOrder");
+      System.out.println("Fail in OrderMapper - getGaest");
       System.out.println(e.getMessage());
     } finally // must close statement
     {
@@ -416,10 +416,43 @@ public class Mapper
           statement.close();
         }
       } catch (SQLException e) {
-        System.out.println("Fail in OrderMapper - getOrder");
+        System.out.println("Fail in OrderMapper - getGaest");
         System.out.println(e.getMessage());
       }
     } return g;
+    }
+
+    boolean UpdateGaest(Gaest gaest)
+    {
+        int abc = 0;
+        String UpdateGaest = "UPDATE GAEST_TBL SET FORNAVN_E = ?,EFTERNAVN = ?,TELEFONNUMMER = ?, E_MAIL = ?, VEJNAVN = ?,"
+                + "VEJNUMMER = ?, POSTNUMMER = ?, BYNAVN = ?, LAND = ?, REJSEBUREAU = ? WHERE GAEST_ID = ? ";
+        
+        
+        
+        try {
+            PreparedStatement statement = con.prepareStatement(UpdateGaest);
+            
+            statement.setString(1,gaest.getFornavn() );
+            statement.setString(2, gaest.getEfternavn());
+            statement.setInt(3, gaest.getTelefonnummer());
+            statement.setString(4, gaest.getEmail());
+            statement.setString(5, gaest.getVejnavn());
+            statement.setInt(6, gaest.getVejnummer());
+            statement.setInt(7, gaest.getPostnummer());
+            statement.setString(8, gaest.getBynavn());
+            statement.setString(9, gaest.getLand());
+            statement.setString(10, gaest.getRejsebureau());
+            statement.setInt(11, gaest.getGaestid());
+            
+        } catch (SQLException e) {
+      System.out.println("Fail in OrderMapper - UpdateGaest");
+      System.out.println(e.getMessage());
+   
+      
+     
+        }
+        return abc == 1;
     }
    
     }
