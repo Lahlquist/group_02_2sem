@@ -64,4 +64,11 @@ public class DBFacade
     {
         return mapp.createNewgaest(gaest);
     }
+
+    public Gaest GetGaest(int gaeid)
+    {
+        return mapp.getGaest(gaeid);
+    }
+
+
 }

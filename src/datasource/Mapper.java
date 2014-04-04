@@ -379,5 +379,48 @@ public class Mapper
         }
         return rowsInserted == 1;
     }
+
+    public Gaest getGaest(int gaeid)
+    {
+        Gaest g = null;
+    
+        String SQLgetGaest = "Select * from GAEST_TBL where GAEST_ID = ?";
+        
+        PreparedStatement statement = null;
+        
+        try {
+            statement = con.prepareStatement(SQLgetGaest);
+            statement.setInt(1, gaeid);
+            ResultSet rs = statement.executeQuery();
+            if (rs.next()){
+                g = new Gaest(gaeid,
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getInt(4),
+                        rs.getString(5),
+                        rs.getString(6),
+                        rs.getInt(7),
+                        rs.getInt(8),
+                        rs.getString(9),
+                        rs.getString(10),
+                        rs.getString(11));
+                        
+                        }
+      } catch (SQLException e) {
+      System.out.println("Fail in OrderMapper - getOrder");
+      System.out.println(e.getMessage());
+    } finally // must close statement
+    {
+      try {
+        if (statement != null) {
+          statement.close();
+        }
+      } catch (SQLException e) {
+        System.out.println("Fail in OrderMapper - getOrder");
+        System.out.println(e.getMessage());
+      }
+    } return g;
+    }
+   
     }
 
