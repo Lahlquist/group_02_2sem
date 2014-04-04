@@ -90,35 +90,36 @@ public class GUIMedarbejder extends javax.swing.JFrame
         jLabel31 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
-        jTextFieldEfternavn2 = new javax.swing.JTextField();
-        jTextFieldFornavn2 = new javax.swing.JTextField();
-        jTextFieldLand2 = new javax.swing.JTextField();
-        jTextFieldEmail2 = new javax.swing.JTextField();
+        jTextFieldEfternavnRSG = new javax.swing.JTextField();
+        jTextFieldFornavnRSG = new javax.swing.JTextField();
+        jTextFieldLandRSG = new javax.swing.JTextField();
+        jTextFieldEmailRSG = new javax.swing.JTextField();
         jLabel34 = new javax.swing.JLabel();
-        jTextFieldTelefonnummer2 = new javax.swing.JTextField();
+        jTextFieldTelefonnummerRSG = new javax.swing.JTextField();
         jLabel35 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        jButtonRedigerGaest = new javax.swing.JButton();
         jLabel36 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
-        jTextfieldPostnummer2 = new javax.swing.JTextField();
-        jTextfieldRejsebureau2 = new javax.swing.JTextField();
-        jTextfieldVejnavn2 = new javax.swing.JTextField();
+        jTextfieldPostnummerRSG = new javax.swing.JTextField();
+        jTextfieldRejsebureauRSG = new javax.swing.JTextField();
+        jTextfieldVejnavnRSG = new javax.swing.JTextField();
         jDateChooserCheckind1 = new com.toedter.calendar.JDateChooser();
         jLabelInfo2 = new javax.swing.JLabel();
         jDateChooserCheckud1 = new com.toedter.calendar.JDateChooser();
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
-        jTextfieldVejnummer2 = new javax.swing.JTextField();
-        jTextFieldLejlighedsID1 = new javax.swing.JTextField();
+        jTextfieldVejnummerRSG = new javax.swing.JTextField();
+        jTextFieldLejlighedsIDRSG = new javax.swing.JTextField();
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
-        jTextfieldBynavn2 = new javax.swing.JTextField();
+        jTextfieldBynavnRSG = new javax.swing.JTextField();
         jLabel44 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        jButtonSletGaest = new javax.swing.JButton();
         jLabel45 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        jTextFieldGaestID = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -217,7 +218,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 1166, Short.MAX_VALUE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 2356, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -353,7 +354,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
                                     .addComponent(jTextFieldFornavn, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextfieldBynavn, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextfieldVejnavn, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 343, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1602, Short.MAX_VALUE)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel5)
                                     .addComponent(jLabel4)
@@ -389,13 +390,13 @@ public class GUIMedarbejder extends javax.swing.JFrame
                                 .addComponent(jLabelInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 437, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1760, Short.MAX_VALUE)
                                 .addComponent(jButtonBekræftBooking)
                                 .addGap(33, 33, 33))
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGap(78, 78, 78)
                                 .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 298, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1488, Short.MAX_VALUE)
                                 .addComponent(jLabel14)
                                 .addGap(18, 18, 18)
                                 .addComponent(jButtonCheckudsigt)
@@ -501,7 +502,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1166, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 2356, Short.MAX_VALUE)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jButtonHentOversigt)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -527,11 +528,11 @@ public class GUIMedarbejder extends javax.swing.JFrame
 
         jLabel33.setText("Fornavn:");
 
-        jTextFieldFornavn2.addActionListener(new java.awt.event.ActionListener()
+        jTextFieldFornavnRSG.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                jTextFieldFornavn2ActionPerformed(evt);
+                jTextFieldFornavnRSGActionPerformed(evt);
             }
         });
 
@@ -539,7 +540,14 @@ public class GUIMedarbejder extends javax.swing.JFrame
 
         jLabel35.setText("Vejnummer:");
 
-        jButton2.setText("Rediger Gæst");
+        jButtonRedigerGaest.setText("Rediger Gæst");
+        jButtonRedigerGaest.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jButtonRedigerGaestActionPerformed(evt);
+            }
+        });
 
         jLabel36.setText("Rejsebureau:");
 
@@ -560,9 +568,11 @@ public class GUIMedarbejder extends javax.swing.JFrame
 
         jLabel44.setText("Land:");
 
-        jButton3.setText("Slet Gæst");
+        jButtonSletGaest.setText("Slet Gæst");
 
         jLabel45.setText("Gæst ID:");
+
+        jButton1.setText("Hent Gæst");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -575,12 +585,12 @@ public class GUIMedarbejder extends javax.swing.JFrame
                         .addComponent(jLabel37)
                         .addGap(724, 724, 724))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addComponent(jLabel42)
-                                .addGap(35, 35, 35)
-                                .addComponent(jDateChooserCheckind1, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jDateChooserCheckind1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel32)
                                     .addComponent(jLabel44)
@@ -590,14 +600,16 @@ public class GUIMedarbejder extends javax.swing.JFrame
                                     .addComponent(jLabel45))
                                 .addGap(38, 38, 38)
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextFieldEfternavn2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                    .addComponent(jTextFieldLand2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                    .addComponent(jTextFieldFornavn2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                    .addComponent(jTextfieldBynavn2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                    .addComponent(jTextfieldVejnavn2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                    .addComponent(jTextField2))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 412, Short.MAX_VALUE)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextFieldEfternavnRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldLandRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldFornavnRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                    .addComponent(jTextfieldBynavnRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                    .addComponent(jTextfieldVejnavnRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldGaestID))))
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1)
+                        .addGap(290, 290, 290)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel43)
@@ -607,88 +619,91 @@ public class GUIMedarbejder extends javax.swing.JFrame
                                     .addComponent(jLabel35)
                                     .addComponent(jLabel40))
                                 .addGap(38, 38, 38)
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jDateChooserCheckud1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextFieldEmail2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                    .addComponent(jTextFieldTelefonnummer2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                    .addComponent(jTextfieldRejsebureau2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                    .addComponent(jTextfieldPostnummer2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                    .addComponent(jTextfieldVejnummer2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)))
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jTextFieldEmailRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                        .addComponent(jTextFieldTelefonnummerRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                        .addComponent(jTextfieldRejsebureauRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                        .addComponent(jTextfieldPostnummerRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                        .addComponent(jTextfieldVejnummerRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE))
+                                    .addComponent(jDateChooserCheckud1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jLabel31)
                             .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addComponent(jLabel30)
                                 .addGap(48, 48, 48)
-                                .addComponent(jTextFieldLejlighedsID1)))
-                        .addGap(312, 312, 312))
+                                .addComponent(jTextFieldLejlighedsIDRSG, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(1501, 1501, 1501))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(72, 72, 72)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGap(203, 203, 203)
-                                .addComponent(jButton2)
-                                .addGap(99, 99, 99)
-                                .addComponent(jButton3)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addComponent(jLabelInfo2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(734, 734, 734))))))
+                                .addGap(734, 734, 734))
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGap(203, 203, 203)
+                                .addComponent(jButtonRedigerGaest)
+                                .addGap(99, 99, 99)
+                                .addComponent(jButtonSletGaest)
+                                .addGap(0, 1798, Short.MAX_VALUE))))))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(76, Short.MAX_VALUE)
+                .addContainerGap(70, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel42, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jDateChooserCheckind1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel40, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jDateChooserCheckud1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(54, 54, 54)
+                .addGap(29, 29, 29)
                 .addComponent(jLabel31)
-                .addGap(18, 18, 18)
+                .addGap(12, 12, 12)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel30)
                         .addComponent(jLabel45)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTextFieldLejlighedsID1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                        .addComponent(jTextFieldGaestID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton1))
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jTextFieldLejlighedsIDRSG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel30)))
+                .addGap(52, 52, 52)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldFornavn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldFornavnRSG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel33)
-                    .addComponent(jTextFieldEmail2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldEmailRSG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel39))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldEfternavn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldEfternavnRSG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel32)
-                    .addComponent(jTextFieldTelefonnummer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldTelefonnummerRSG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel43))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldLand2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldLandRSG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel44)
-                    .addComponent(jTextfieldRejsebureau2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextfieldRejsebureauRSG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel36))
                 .addGap(26, 26, 26)
                 .addComponent(jLabel37)
                 .addGap(20, 20, 20)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextfieldBynavn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextfieldPostnummer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextfieldBynavnRSG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextfieldPostnummerRSG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel38)
                     .addComponent(jLabel34))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextfieldVejnavn2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextfieldVejnummer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextfieldVejnavnRSG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextfieldVejnummerRSG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel41)
                     .addComponent(jLabel35))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelInfo2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(jButtonRedigerGaest)
+                    .addComponent(jButtonSletGaest))
                 .addGap(33, 33, 33))
         );
 
@@ -782,7 +797,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
                                                 .addComponent(jTextfieldBynavn1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
                                                 .addComponent(jTextfieldVejnavn1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
                                                 .addComponent(jTextFieldLejlighedsID))))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 412, Short.MAX_VALUE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1602, Short.MAX_VALUE)
                                     .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel16)
                                         .addComponent(jLabel15)
@@ -880,7 +895,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 585, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1)
                 .addContainerGap())
         );
 
@@ -907,10 +922,10 @@ public class GUIMedarbejder extends javax.swing.JFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldFornavn1ActionPerformed
 
-    private void jTextFieldFornavn2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jTextFieldFornavn2ActionPerformed
-    {//GEN-HEADEREND:event_jTextFieldFornavn2ActionPerformed
+    private void jTextFieldFornavnRSGActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jTextFieldFornavnRSGActionPerformed
+    {//GEN-HEADEREND:event_jTextFieldFornavnRSGActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldFornavn2ActionPerformed
+    }//GEN-LAST:event_jTextFieldFornavnRSGActionPerformed
 
     private void jButtonHentOversigtActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonHentOversigtActionPerformed
     {//GEN-HEADEREND:event_jButtonHentOversigtActionPerformed
@@ -992,6 +1007,11 @@ public class GUIMedarbejder extends javax.swing.JFrame
 
     }//GEN-LAST:event_jButtonGetGuestListActionPerformed
 
+    private void jButtonRedigerGaestActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonRedigerGaestActionPerformed
+    {//GEN-HEADEREND:event_jButtonRedigerGaestActionPerformed
+       c.UpdateGaest(jTextFieldGaestID.getText());
+    }//GEN-LAST:event_jButtonRedigerGaestActionPerformed
+
 
     public static void main(String args[])
     {
@@ -1042,13 +1062,14 @@ public class GUIMedarbejder extends javax.swing.JFrame
     private javax.swing.JRadioButton SingleRumBtn;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonBekræftBooking;
     private javax.swing.JButton jButtonCheckudsigt;
     private javax.swing.JButton jButtonGetGuestList;
     private javax.swing.JButton jButtonHentOversigt;
     private javax.swing.JButton jButtonOpretGæst;
+    private javax.swing.JButton jButtonRedigerGaest;
+    private javax.swing.JButton jButtonSletGaest;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private com.toedter.calendar.JDateChooser jDateChooser2;
     private com.toedter.calendar.JDateChooser jDateChooserCheckind;
@@ -1120,39 +1141,39 @@ public class GUIMedarbejder extends javax.swing.JFrame
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextFieldEfternavn;
     private javax.swing.JTextField jTextFieldEfternavn1;
-    private javax.swing.JTextField jTextFieldEfternavn2;
+    private javax.swing.JTextField jTextFieldEfternavnRSG;
     private javax.swing.JTextField jTextFieldEmail;
     private javax.swing.JTextField jTextFieldEmail1;
-    private javax.swing.JTextField jTextFieldEmail2;
+    private javax.swing.JTextField jTextFieldEmailRSG;
     private javax.swing.JTextField jTextFieldFornavn;
     private javax.swing.JTextField jTextFieldFornavn1;
-    private javax.swing.JTextField jTextFieldFornavn2;
+    private javax.swing.JTextField jTextFieldFornavnRSG;
+    private javax.swing.JTextField jTextFieldGaestID;
     private javax.swing.JTextField jTextFieldLand;
     private javax.swing.JTextField jTextFieldLand1;
-    private javax.swing.JTextField jTextFieldLand2;
+    private javax.swing.JTextField jTextFieldLandRSG;
     private javax.swing.JTextField jTextFieldLejlighedsID;
-    private javax.swing.JTextField jTextFieldLejlighedsID1;
+    private javax.swing.JTextField jTextFieldLejlighedsIDRSG;
     private javax.swing.JTextField jTextFieldTelefonnummer;
     private javax.swing.JTextField jTextFieldTelefonnummer1;
-    private javax.swing.JTextField jTextFieldTelefonnummer2;
+    private javax.swing.JTextField jTextFieldTelefonnummerRSG;
     private javax.swing.JTextField jTextfieldBynavn;
     private javax.swing.JTextField jTextfieldBynavn1;
-    private javax.swing.JTextField jTextfieldBynavn2;
+    private javax.swing.JTextField jTextfieldBynavnRSG;
     private javax.swing.JTextField jTextfieldPostnummer;
     private javax.swing.JTextField jTextfieldPostnummer1;
-    private javax.swing.JTextField jTextfieldPostnummer2;
+    private javax.swing.JTextField jTextfieldPostnummerRSG;
     private javax.swing.JTextField jTextfieldRejsebureau;
     private javax.swing.JTextField jTextfieldRejsebureau1;
-    private javax.swing.JTextField jTextfieldRejsebureau2;
+    private javax.swing.JTextField jTextfieldRejsebureauRSG;
     private javax.swing.JTextField jTextfieldVejnavn;
     private javax.swing.JTextField jTextfieldVejnavn1;
-    private javax.swing.JTextField jTextfieldVejnavn2;
+    private javax.swing.JTextField jTextfieldVejnavnRSG;
     private javax.swing.JTextField jTextfieldVejnummer;
     private javax.swing.JTextField jTextfieldVejnummer1;
-    private javax.swing.JTextField jTextfieldVejnummer2;
+    private javax.swing.JTextField jTextfieldVejnummerRSG;
     // End of variables declaration//GEN-END:variables
 }

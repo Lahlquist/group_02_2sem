@@ -84,6 +84,11 @@ public class Controller
         }
         return gaest;
     }
+
+    public void UpdateGaest(String text)
+    {
+        
+    }
     
     
     
