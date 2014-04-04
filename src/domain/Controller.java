@@ -87,7 +87,7 @@ public class Controller
 
     public void UpdateGaest(String text)
     {
-        
+        return;
     }
     
     
