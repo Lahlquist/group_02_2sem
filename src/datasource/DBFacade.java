@@ -70,5 +70,12 @@ public class DBFacade
         return mapp.getGaest(gaeid);
     }
 
+    public boolean UpdateGaest(Gaest gaest)
+    {
+       return mapp.UpdateGaest(gaest);
+    }
+
+ 
+
 
 }
