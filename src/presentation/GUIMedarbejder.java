@@ -1013,7 +1013,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
        int tlfno = Integer.parseInt(jTextFieldTelefonnummerRSG.getText());
         int vno = Integer.parseInt(jTextfieldVejnummerRSG.getText());
         int pno = Integer.parseInt(jTextfieldPostnummerRSG.getText());
-        boolean status = c.UpdateGaest(count,jTextFieldFornavnRSG.getText(), jTextFieldEfternavnRSG.getText(), tlfno, jTextFieldEmailRSG.getText(), jTextfieldVejnavnRSG.getText(), vno, pno, jTextfieldBynavnRSG.getText(), jTextFieldLandRSG.getText(), jTextfieldRejsebureauRSG.getText());
+        Gaest status = c.UpdateGaest(count,jTextFieldFornavnRSG.getText(), jTextFieldEfternavnRSG.getText(), tlfno, jTextFieldEmailRSG.getText(), jTextfieldVejnavnRSG.getText(), vno, pno, jTextfieldBynavnRSG.getText(), jTextFieldLandRSG.getText(), jTextfieldRejsebureauRSG.getText());
     }//GEN-LAST:event_jButtonRedigerGaestActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton1ActionPerformed

@@ -87,10 +87,6 @@ public class Controller
         return gaest;
     }
 
-    public void UpdateGaest(String text)
-    {
-        return;
-    }
 
     public Gaest GetGaest(int gaeid)
     {
@@ -100,11 +96,15 @@ public class Controller
         return currentgaeid;
     }
 
-    public boolean UpdateGaest(int gaeid, String fnavn, String enavn, int telnu, String mail, String vnavn, int vno, int pno, String bnavn, String land, String rbu)
+    public Gaest UpdateGaest(int gaeid, String fnavn, String enavn, int telnu, String mail, String vnavn, int vno, int pno, String bnavn, String land, String rbu)
     {
-        
+        gaest = new Gaest(gaeid, fnavn, enavn, telnu, mail, vnavn, vno, pno, bnavn, land, rbu);
         boolean status = facade.UpdateGaest(gaest);
-        return status;
+        if (!status);
+        {
+            gaest = null;
+        }
+        return gaest;
     }
 
 
