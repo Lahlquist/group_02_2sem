@@ -28,7 +28,8 @@ public class GUIMedarbejder extends javax.swing.JFrame
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         jTextField1 = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -118,6 +119,8 @@ public class GUIMedarbejder extends javax.swing.JFrame
         jTextFieldGaestID = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabelHentGaest = new javax.swing.JLabel();
+        jLabelGaestRedigeret = new javax.swing.JLabel();
+        jLabelGaestSlettet = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -160,13 +163,15 @@ public class GUIMedarbejder extends javax.swing.JFrame
         jMenuBar1.add(jMenu2);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+            new Object [][]
+            {
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null}
             },
-            new String [] {
+            new String []
+            {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
@@ -176,26 +181,33 @@ public class GUIMedarbejder extends javax.swing.JFrame
 
         GaesteListen.setAutoCreateRowSorter(true);
         GaesteListen.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+            new Object [][]
+            {
 
             },
-            new String [] {
+            new String []
+            {
                 "GæstID", "Fornavn(e)", "Efternavn", "Telefonnummer", "Email", "Vejnavn", "Vejnummer", "Postnummer", "Bynavn", "Land", "Rejsebureau"
             }
-        ) {
-            boolean[] canEdit = new boolean [] {
+        )
+        {
+            boolean[] canEdit = new boolean []
+            {
                 false, true, false, false, false, false, false, false, false, false, false
             };
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
+            public boolean isCellEditable(int rowIndex, int columnIndex)
+            {
                 return canEdit [columnIndex];
             }
         });
         jScrollPane3.setViewportView(GaesteListen);
 
         jButtonGetGuestList.setText("Hent Gæsteliste");
-        jButtonGetGuestList.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButtonGetGuestList.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jButtonGetGuestListActionPerformed(evt);
             }
         });
@@ -212,7 +224,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
                         .addComponent(jLabelInfoOversigt))
                     .addComponent(jButtonGetGuestList)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 816, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(351, Short.MAX_VALUE))
+                .addContainerGap(79, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -228,8 +240,10 @@ public class GUIMedarbejder extends javax.swing.JFrame
 
         jTabbedPane1.addTab("Gæst Oversigt", jPanel1);
 
-        jTextFieldFornavn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jTextFieldFornavn.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jTextFieldFornavnActionPerformed(evt);
             }
         });
@@ -253,31 +267,39 @@ public class GUIMedarbejder extends javax.swing.JFrame
 
         buttonGroup1.add(SingleRumBtn);
         SingleRumBtn.setText("Single Rum");
-        SingleRumBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        SingleRumBtn.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 SingleRumBtnActionPerformed(evt);
             }
         });
 
         buttonGroup1.add(FamilieRumBtn);
         FamilieRumBtn.setText("Familie Rum (5 pers)");
-        FamilieRumBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        FamilieRumBtn.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 FamilieRumBtnActionPerformed(evt);
             }
         });
 
         buttonGroup1.add(DobbeltRumBtn);
         DobbeltRumBtn.setText("Dobbelt Rum");
-        DobbeltRumBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        DobbeltRumBtn.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 DobbeltRumBtnActionPerformed(evt);
             }
         });
 
         jButtonBekræftBooking.setText("Bekræft Booking");
-        jButtonBekræftBooking.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButtonBekræftBooking.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jButtonBekræftBookingActionPerformed(evt);
             }
         });
@@ -293,8 +315,10 @@ public class GUIMedarbejder extends javax.swing.JFrame
         jLabel13.setText("Vejnummer:");
 
         jButtonCheckudsigt.setText("Check dato");
-        jButtonCheckudsigt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButtonCheckudsigt.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jButtonCheckudsigtActionPerformed(evt);
             }
         });
@@ -373,7 +397,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
                                 .addGap(18, 18, 18)
                                 .addComponent(jButtonCheckudsigt)
                                 .addGap(33, 33, 33)))))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -448,26 +472,33 @@ public class GUIMedarbejder extends javax.swing.JFrame
         jTabbedPane1.addTab("Booking af Værelse", jPanel3);
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+            new Object [][]
+            {
 
             },
-            new String [] {
+            new String []
+            {
                 "ID", "Type", "Status", "Personer", "Dato ind", "Dato Ud"
             }
-        ) {
-            boolean[] canEdit = new boolean [] {
+        )
+        {
+            boolean[] canEdit = new boolean []
+            {
                 false, false, false, false, false, false
             };
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
+            public boolean isCellEditable(int rowIndex, int columnIndex)
+            {
                 return canEdit [columnIndex];
             }
         });
         jScrollPane1.setViewportView(jTable2);
 
         jButtonHentOversigt.setText("Hent Oversigt");
-        jButtonHentOversigt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButtonHentOversigt.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jButtonHentOversigtActionPerformed(evt);
             }
         });
@@ -479,16 +510,16 @@ public class GUIMedarbejder extends javax.swing.JFrame
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonHentOversigt)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 725, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(442, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 756, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonHentOversigt))
+                .addContainerGap(139, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
                 .addComponent(jButtonHentOversigt)
                 .addGap(42, 42, 42))
         );
@@ -503,8 +534,10 @@ public class GUIMedarbejder extends javax.swing.JFrame
 
         jLabel33.setText("Fornavn:");
 
-        jTextFieldFornavnRSG.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jTextFieldFornavnRSG.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jTextFieldFornavnRSGActionPerformed(evt);
             }
         });
@@ -514,8 +547,10 @@ public class GUIMedarbejder extends javax.swing.JFrame
         jLabel35.setText("Vejnummer:");
 
         jButtonRedigerGaest.setText("Rediger Gæst");
-        jButtonRedigerGaest.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButtonRedigerGaest.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jButtonRedigerGaestActionPerformed(evt);
             }
         });
@@ -540,12 +575,21 @@ public class GUIMedarbejder extends javax.swing.JFrame
         jLabel44.setText("Land:");
 
         jButtonSletGaest.setText("Slet Gæst");
+        jButtonSletGaest.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                jButtonSletGaestActionPerformed(evt);
+            }
+        });
 
         jLabel45.setText("Gæst ID:");
 
         jButton1.setText("Hent Gæst");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButton1.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jButton1ActionPerformed(evt);
             }
         });
@@ -559,7 +603,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jLabel37)
-                        .addGap(724, 724, 724))
+                        .addGap(724, 2292, Short.MAX_VALUE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createSequentialGroup()
@@ -596,13 +640,15 @@ public class GUIMedarbejder extends javax.swing.JFrame
                                     .addComponent(jLabel40))
                                 .addGap(38, 38, 38)
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jTextFieldEmailRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                        .addComponent(jTextFieldTelefonnummerRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                        .addComponent(jTextfieldRejsebureauRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                        .addComponent(jTextfieldPostnummerRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                                        .addComponent(jTextfieldVejnummerRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE))
-                                    .addComponent(jDateChooserCheckud1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jDateChooserCheckud1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabelGaestSlettet)
+                                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jTextFieldEmailRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                            .addComponent(jTextFieldTelefonnummerRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                            .addComponent(jTextfieldRejsebureauRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                            .addComponent(jTextfieldPostnummerRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                                            .addComponent(jTextfieldVejnummerRSG, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)))))
                             .addComponent(jLabel31)
                             .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addComponent(jLabel30)
@@ -617,9 +663,10 @@ public class GUIMedarbejder extends javax.swing.JFrame
                                 .addComponent(jLabelInfo2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(734, 734, 734))
                             .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGap(203, 203, 203)
+                                .addComponent(jLabelGaestRedigeret)
+                                .addGap(218, 218, 218)
                                 .addComponent(jButtonRedigerGaest)
-                                .addGap(99, 99, 99)
+                                .addGap(68, 68, 68)
                                 .addComponent(jButtonSletGaest)
                                 .addGap(0, 0, Short.MAX_VALUE))))))
         );
@@ -678,11 +725,17 @@ public class GUIMedarbejder extends javax.swing.JFrame
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelInfo2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonRedigerGaest)
-                    .addComponent(jButtonSletGaest)
-                    .addComponent(jLabelHentGaest))
-                .addGap(33, 33, 33))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButtonRedigerGaest)
+                            .addComponent(jButtonSletGaest)
+                            .addComponent(jLabelHentGaest)
+                            .addComponent(jLabelGaestRedigeret))
+                        .addGap(33, 33, 33))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabelGaestSlettet)
+                        .addGap(46, 46, 46))))
         );
 
         jTabbedPane1.addTab("Redigering / Sletning af Gæst", jPanel5);
@@ -706,8 +759,10 @@ public class GUIMedarbejder extends javax.swing.JFrame
 
         jLabel23.setText("Postnummer:");
 
-        jTextFieldFornavn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jTextFieldFornavn1.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jTextFieldFornavn1ActionPerformed(evt);
             }
         });
@@ -725,8 +780,10 @@ public class GUIMedarbejder extends javax.swing.JFrame
         jLabel29.setText("Check Ud:");
 
         jButtonOpretGæst.setText("Opret Gæst");
-        jButtonOpretGæst.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButtonOpretGæst.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 jButtonOpretGæstActionPerformed(evt);
             }
         });
@@ -766,7 +823,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
                     .addComponent(jLabel27))
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 715, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabelGæstoprettetinfo)
                         .addGap(231, 231, 231))
                     .addGroup(jPanel6Layout.createSequentialGroup()
@@ -786,7 +843,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
                             .addComponent(jTextfieldRejsebureau1)
                             .addComponent(jTextfieldPostnummer1)
                             .addComponent(jTextfieldVejnummer1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(280, Short.MAX_VALUE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(415, 415, 415)
                 .addComponent(jButtonOpretGæst)
@@ -870,7 +927,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 910, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -974,7 +1031,9 @@ public class GUIMedarbejder extends javax.swing.JFrame
        int tlfno = Integer.parseInt(jTextFieldTelefonnummerRSG.getText());
         int vno = Integer.parseInt(jTextfieldVejnummerRSG.getText());
         int pno = Integer.parseInt(jTextfieldPostnummerRSG.getText());
-        Gaest status = c.UpdateGaest(count,jTextFieldFornavnRSG.getText(), jTextFieldEfternavnRSG.getText(), tlfno, jTextFieldEmailRSG.getText(), jTextfieldVejnavnRSG.getText(), vno, pno, jTextfieldBynavnRSG.getText(), jTextFieldLandRSG.getText(), jTextfieldRejsebureauRSG.getText());
+        int giid = Integer.parseInt(jTextFieldGaestID.getText());
+        boolean status = c.UpdateGaest(giid,jTextFieldFornavnRSG.getText(), jTextFieldEfternavnRSG.getText(), tlfno, jTextFieldEmailRSG.getText(), jTextfieldVejnavnRSG.getText(), vno, pno, jTextfieldBynavnRSG.getText(), jTextFieldLandRSG.getText(), jTextfieldRejsebureauRSG.getText());
+        jLabelGaestRedigeret.setText("Gæst opdateret!");
     }//GEN-LAST:event_jButtonRedigerGaestActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton1ActionPerformed
@@ -1017,6 +1076,16 @@ public class GUIMedarbejder extends javax.swing.JFrame
     {//GEN-HEADEREND:event_jTextFieldFornavn1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldFornavn1ActionPerformed
+
+    private void jButtonSletGaestActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButtonSletGaestActionPerformed
+    {//GEN-HEADEREND:event_jButtonSletGaestActionPerformed
+        int tlfno = Integer.parseInt(jTextFieldTelefonnummerRSG.getText());
+        int vno = Integer.parseInt(jTextfieldVejnummerRSG.getText());
+        int pno = Integer.parseInt(jTextfieldPostnummerRSG.getText());
+        int giid = Integer.parseInt(jTextFieldGaestID.getText());
+        Gaest status = c.SletGaest(giid,jTextFieldFornavnRSG.getText(), jTextFieldEfternavnRSG.getText(), tlfno, jTextFieldEmailRSG.getText(), jTextfieldVejnavnRSG.getText(), vno, pno, jTextfieldBynavnRSG.getText(), jTextFieldLandRSG.getText(), jTextfieldRejsebureauRSG.getText());
+        jLabelGaestSlettet.setText("Gæst Slettet!");
+    }//GEN-LAST:event_jButtonSletGaestActionPerformed
 
     public static void main(String args[])
     {
@@ -1126,6 +1195,8 @@ public class GUIMedarbejder extends javax.swing.JFrame
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelGaestRedigeret;
+    private javax.swing.JLabel jLabelGaestSlettet;
     private javax.swing.JLabel jLabelGæstoprettetinfo;
     private javax.swing.JLabel jLabelHentGaest;
     private javax.swing.JLabel jLabelInfo;

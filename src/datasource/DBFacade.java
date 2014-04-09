@@ -75,6 +75,11 @@ public class DBFacade
        return mapp.UpdateGaest(gaest);
     }
 
+    public boolean SletGaest(Gaest gaest)
+    {
+        return mapp.SletGaest(gaest);
+    }
+
  
 
 

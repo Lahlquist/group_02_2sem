@@ -336,7 +336,7 @@ public class Mapper {
 
             }
         } catch (SQLException e) {
-            System.out.println("Fail in OrderMapper - getGaest");
+            System.out.println("Fail in Mapper - getGaest");
             System.out.println(e.getMessage());
         } finally // must close statement
         {
@@ -345,7 +345,7 @@ public class Mapper {
                     statement.close();
                 }
             } catch (SQLException e) {
-                System.out.println("Fail in OrderMapper - getGaest");
+                System.out.println("Fail in Mapper - getGaest");
                 System.out.println(e.getMessage());
             }
         }
@@ -355,13 +355,13 @@ public class Mapper {
     
     
     boolean UpdateGaest(Gaest gaest) {
-        int abc = 0;
+        int RowsUpdated = 0;
         String UpdateGaest = "UPDATE GAEST_TBL SET FORNAVN_E = ?,EFTERNAVN = ?,TELEFONNUMMER = ?, E_MAIL = ?, VEJNAVN = ?,"
                 + "VEJNUMMER = ?, POSTNUMMER = ?, BYNAVN = ?, LAND = ?, REJSEBUREAU = ? WHERE GAEST_ID = ? ";
 
         try {
             PreparedStatement statement = con.prepareStatement(UpdateGaest);
-            //  System.out.println(gaest);
+              System.out.println(gaest);
             statement.setString(1, gaest.getFornavn());
             statement.setString(2, gaest.getEfternavn());
             statement.setInt(3, gaest.getTelefonnummer());
@@ -373,12 +373,33 @@ public class Mapper {
             statement.setString(9, gaest.getLand());
             statement.setString(10, gaest.getRejsebureau());
             statement.setInt(11, gaest.getGaestid());
+            RowsUpdated = statement.executeUpdate();
+            System.out.println(RowsUpdated);
+            System.out.println(gaest.getGaestid());
+            System.out.println(gaest.getEfternavn());
+            
 
         } catch (SQLException e) {
-            System.out.println("Fail in OrderMapper - UpdateGaest");
+            System.out.println("Fail in Mapper - UpdateGaest");
             System.out.println(e.getMessage());
         }
-        return abc == 1;
+        return RowsUpdated == 1;
+    }
+
+    boolean SletGaest(Gaest gaest)
+    {
+        int RowsSlettet = 0; 
+        String SletGaest = "DELETE GAEST_TBL where GAEST_ID = ?";
+        
+        try {
+            PreparedStatement statement = con.prepareStatement(SletGaest);
+            statement.setInt(1, gaest.getGaestid());
+            RowsSlettet = statement.executeUpdate();
+        }catch (SQLException e) {
+            System.out.println("Fail in Mapper - Slet Gaest");
+            System.out.println(e.getMessage());
+        }
+        return RowsSlettet == 1;
     }
 }
 
