@@ -934,8 +934,15 @@ public class GUIMedarbejder extends javax.swing.JFrame
         //     jTextFieldLand.getText();
         //     jTextFieldEmail.getText();
         //     jTextfieldAntalnætter.getText();
+        SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
 
-        Gaest status = c.createNewBooking(count, jTextFieldFornavn.getText(), jTextFieldEfternavn.getText(), tlfno, jTextFieldEmail.getText(), jTextfieldVejnavn.getText(), vno, pno, jTextfieldBynavn.getText(), jTextFieldLand.getText(), jTextfieldRejsebureau.getText());
+        Date x = jDateChooser1.getDate();
+        Date y = jDateChooser2.getDate();
+
+        String xFormat = format.format(x);
+        String yFormat = format.format(y);
+
+        Gaest status = c.createNewBooking(count, jTextFieldFornavn.getText(), jTextFieldEfternavn.getText(), tlfno, jTextFieldEmail.getText(), jTextfieldVejnavn.getText(), vno, pno, jTextfieldBynavn.getText(), jTextFieldLand.getText(), jTextfieldRejsebureau.getText(), xFormat, yFormat);
         jLabelInfo.setText("Gæst Oprettet!");
     }//GEN-LAST:event_jButtonBekræftBookingActionPerformed
 

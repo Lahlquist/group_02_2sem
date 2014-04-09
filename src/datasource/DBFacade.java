@@ -4,6 +4,7 @@ import domain.Gaest;
 import domain.Booking;
 import domain.Lejlighed;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -35,9 +36,9 @@ public class DBFacade
         return mapp.getGaester();
     }
     
-    public boolean createNewBooking(Gaest g)
+    public boolean createNewBooking(Gaest g, String IN, String OUT)
     {
-        return mapp.createNewBooking(g);
+        return mapp.createNewBooking(g,IN,OUT);
     }
     
     public List<Lejlighed> getLejlighedliste()

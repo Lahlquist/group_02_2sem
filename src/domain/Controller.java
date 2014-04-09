@@ -2,6 +2,7 @@ package domain;
 
 import datasource.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -43,10 +44,10 @@ public class Controller
         return currentgListe;
     }
 
-    public Gaest createNewBooking(int gaeid, String fnavn, String enavn, int telnu, String mail, String vnavn, int vno, int pno, String bnavn, String land, String rbu)
+    public Gaest createNewBooking(int gaeid, String fnavn, String enavn, int telnu, String mail, String vnavn, int vno, int pno, String bnavn, String land, String rbu, String IN, String OUT)
     {
         gaest = new Gaest(gaeid, fnavn, enavn, telnu, mail, vnavn, vno, pno, bnavn, land, rbu);
-        boolean status = facade.createNewBooking(gaest);
+        boolean status = facade.createNewBooking(gaest, IN, OUT);
         if (!status);
         {
             gaest = null;

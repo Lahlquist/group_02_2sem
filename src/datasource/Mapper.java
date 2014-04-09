@@ -77,9 +77,9 @@ public class Mapper {
 
     
     
-    public boolean createNewBooking(Gaest g, Date IN, Date OUT) {
+    public boolean createNewBooking(Gaest g, String IN, String OUT) {
         int rowsInserted = 0;
-
+        
         String SQLStringGæst = "insert into GAEST_TBL values (?,?,?,?,?,?,?,?,?,?,?)";
 
         String SQLString1 = "select gaest_iddd.nextval from dual";
