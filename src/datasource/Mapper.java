@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import domain.Gaest;
 import domain.Lejlighed;
-import domain.Booking;
+import java.util.Date;
 
 
 /*
@@ -23,6 +23,7 @@ public class Mapper {
 
     //FIELDS
     ArrayList<Integer> ledig_id = new ArrayList<>();
+    int bookingID;
     private final Connection con;
 
     //CONSTRUCTOR   
@@ -76,14 +77,14 @@ public class Mapper {
 
     
     
-    public boolean createNewBooking(Gaest g) {
+    public boolean createNewBooking(Gaest g, Date IN, Date OUT) {
         int rowsInserted = 0;
 
         String SQLStringGæst = "insert into GAEST_TBL values (?,?,?,?,?,?,?,?,?,?,?)";
 
         String SQLString1 = "select gaest_iddd.nextval from dual";
 
-        //String SQLString2 = "select booking_iddd.nextval from 'dual?'";
+        String SQLString2 = "select booking_iddd.nextval from dual";
 
         String SQLStringGB = "insert into GAEST_BOOKING_TBL values (?,?)";
 
@@ -98,6 +99,12 @@ public class Mapper {
             if (rs.next()) {
                 g.setGaestid(rs.getInt(1));
             }
+            statement = con.prepareStatement(SQLString2);
+            ResultSet rs2 = statement.executeQuery();
+            if (rs2.next()) {
+                bookingID = (rs2.getInt(1));
+            }
+            
             //INSERT INTO GUEST_TBL
             statement = con.prepareStatement(SQLStringGæst);
             statement.setInt(1, g.getGaestid());
@@ -116,14 +123,14 @@ public class Mapper {
             statement = con.prepareStatement(SQLStringGB);
 
             //INSERT INTO GUEST_BOOKING_TBL
-            statement.setInt(1, 13);               // BOOKING_ID
+            statement.setInt(1, bookingID);               // BOOKING_ID
             statement.setInt(2, g.getGaestid());
             rowsInserted = statement.executeUpdate();
 
             statement = con.prepareStatement(SQLStringLB);
 
             //INSERT INTO BOOKEDE_LEJLIGHED_TBL
-            statement.setInt(1, 10);                // BOOKING_ID (LAVE SQL QUERY?)
+            statement.setInt(1, bookingID);                // BOOKING_ID (LAVE SQL QUERY?)
             statement.setInt(2, ledig_id.get(0));   // LEJLIGHED_ID
             statement.setDate(3, null);             // METODEN SKAL TAGE IMOD CHECK IN/OUT DATES
             statement.setDate(4, null);             // CHECKOUT   
@@ -139,7 +146,7 @@ public class Mapper {
                 System.out.println("Fejler i mapper - Create New booking");
             }
         }
-        return rowsInserted == 4; // 5 EFTER BOOKING ID
+        return rowsInserted == 3; 
     }
 
     
