@@ -15,12 +15,12 @@ import java.util.List;
 
 public class Lejlighed
 {
-    //FIELDS
     private int Lejlighed_id;
     private String Lejlighed_type;
+
     private List<Lejlighed> lejlighedliste;
     
-    //CONSTRUCTOR
+    
     public Lejlighed(int Lid,String Let)
     {
         Lejlighed_id = Lid;
@@ -28,8 +28,6 @@ public class Lejlighed
         lejlighedliste = new ArrayList<Lejlighed>();
     }
 
-    
-    
     public int getLejlighed_id()
     {
         return Lejlighed_id;

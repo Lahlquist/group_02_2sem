@@ -28,8 +28,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         jTextField1 = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -161,15 +160,13 @@ public class GUIMedarbejder extends javax.swing.JFrame
         jMenuBar1.add(jMenu2);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][]
-            {
+            new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null}
             },
-            new String []
-            {
+            new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
@@ -179,33 +176,26 @@ public class GUIMedarbejder extends javax.swing.JFrame
 
         GaesteListen.setAutoCreateRowSorter(true);
         GaesteListen.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][]
-            {
+            new Object [][] {
 
             },
-            new String []
-            {
+            new String [] {
                 "GæstID", "Fornavn(e)", "Efternavn", "Telefonnummer", "Email", "Vejnavn", "Vejnummer", "Postnummer", "Bynavn", "Land", "Rejsebureau"
             }
-        )
-        {
-            boolean[] canEdit = new boolean []
-            {
+        ) {
+            boolean[] canEdit = new boolean [] {
                 false, true, false, false, false, false, false, false, false, false, false
             };
 
-            public boolean isCellEditable(int rowIndex, int columnIndex)
-            {
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
             }
         });
         jScrollPane3.setViewportView(GaesteListen);
 
         jButtonGetGuestList.setText("Hent Gæsteliste");
-        jButtonGetGuestList.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonGetGuestList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonGetGuestListActionPerformed(evt);
             }
         });
@@ -238,10 +228,8 @@ public class GUIMedarbejder extends javax.swing.JFrame
 
         jTabbedPane1.addTab("Gæst Oversigt", jPanel1);
 
-        jTextFieldFornavn.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jTextFieldFornavn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldFornavnActionPerformed(evt);
             }
         });
@@ -265,39 +253,31 @@ public class GUIMedarbejder extends javax.swing.JFrame
 
         buttonGroup1.add(SingleRumBtn);
         SingleRumBtn.setText("Single Rum");
-        SingleRumBtn.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        SingleRumBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SingleRumBtnActionPerformed(evt);
             }
         });
 
         buttonGroup1.add(FamilieRumBtn);
         FamilieRumBtn.setText("Familie Rum (5 pers)");
-        FamilieRumBtn.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        FamilieRumBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 FamilieRumBtnActionPerformed(evt);
             }
         });
 
         buttonGroup1.add(DobbeltRumBtn);
         DobbeltRumBtn.setText("Dobbelt Rum");
-        DobbeltRumBtn.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        DobbeltRumBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DobbeltRumBtnActionPerformed(evt);
             }
         });
 
         jButtonBekræftBooking.setText("Bekræft Booking");
-        jButtonBekræftBooking.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonBekræftBooking.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonBekræftBookingActionPerformed(evt);
             }
         });
@@ -313,10 +293,8 @@ public class GUIMedarbejder extends javax.swing.JFrame
         jLabel13.setText("Vejnummer:");
 
         jButtonCheckudsigt.setText("Check dato");
-        jButtonCheckudsigt.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonCheckudsigt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCheckudsigtActionPerformed(evt);
             }
         });
@@ -470,33 +448,26 @@ public class GUIMedarbejder extends javax.swing.JFrame
         jTabbedPane1.addTab("Booking af Værelse", jPanel3);
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][]
-            {
+            new Object [][] {
 
             },
-            new String []
-            {
+            new String [] {
                 "ID", "Type", "Status", "Personer", "Dato ind", "Dato Ud"
             }
-        )
-        {
-            boolean[] canEdit = new boolean []
-            {
+        ) {
+            boolean[] canEdit = new boolean [] {
                 false, false, false, false, false, false
             };
 
-            public boolean isCellEditable(int rowIndex, int columnIndex)
-            {
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
             }
         });
         jScrollPane1.setViewportView(jTable2);
 
         jButtonHentOversigt.setText("Hent Oversigt");
-        jButtonHentOversigt.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonHentOversigt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonHentOversigtActionPerformed(evt);
             }
         });
@@ -532,10 +503,8 @@ public class GUIMedarbejder extends javax.swing.JFrame
 
         jLabel33.setText("Fornavn:");
 
-        jTextFieldFornavnRSG.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jTextFieldFornavnRSG.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldFornavnRSGActionPerformed(evt);
             }
         });
@@ -545,10 +514,8 @@ public class GUIMedarbejder extends javax.swing.JFrame
         jLabel35.setText("Vejnummer:");
 
         jButtonRedigerGaest.setText("Rediger Gæst");
-        jButtonRedigerGaest.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonRedigerGaest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRedigerGaestActionPerformed(evt);
             }
         });
@@ -577,10 +544,8 @@ public class GUIMedarbejder extends javax.swing.JFrame
         jLabel45.setText("Gæst ID:");
 
         jButton1.setText("Hent Gæst");
-        jButton1.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
@@ -741,10 +706,8 @@ public class GUIMedarbejder extends javax.swing.JFrame
 
         jLabel23.setText("Postnummer:");
 
-        jTextFieldFornavn1.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jTextFieldFornavn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldFornavn1ActionPerformed(evt);
             }
         });
@@ -762,10 +725,8 @@ public class GUIMedarbejder extends javax.swing.JFrame
         jLabel29.setText("Check Ud:");
 
         jButtonOpretGæst.setText("Opret Gæst");
-        jButtonOpretGæst.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jButtonOpretGæst.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonOpretGæstActionPerformed(evt);
             }
         });
@@ -1013,7 +974,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
        int tlfno = Integer.parseInt(jTextFieldTelefonnummerRSG.getText());
         int vno = Integer.parseInt(jTextfieldVejnummerRSG.getText());
         int pno = Integer.parseInt(jTextfieldPostnummerRSG.getText());
-        boolean status = c.UpdateGaest(count,jTextFieldFornavnRSG.getText(), jTextFieldEfternavnRSG.getText(), tlfno, jTextFieldEmailRSG.getText(), jTextfieldVejnavnRSG.getText(), vno, pno, jTextfieldBynavnRSG.getText(), jTextFieldLandRSG.getText(), jTextfieldRejsebureauRSG.getText());
+        Gaest status = c.UpdateGaest(count,jTextFieldFornavnRSG.getText(), jTextFieldEfternavnRSG.getText(), tlfno, jTextFieldEmailRSG.getText(), jTextfieldVejnavnRSG.getText(), vno, pno, jTextfieldBynavnRSG.getText(), jTextFieldLandRSG.getText(), jTextfieldRejsebureauRSG.getText());
     }//GEN-LAST:event_jButtonRedigerGaestActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton1ActionPerformed

@@ -17,15 +17,14 @@ import java.util.List;
 public class Controller
 {
 
-    //FiELDS
     DBFacade facade = new DBFacade();
     private List<Gaest> currentgListe;
     private List<Lejlighed> currentlListe;
     private Gaest gaest;
     private Gaest currentgaeid;
+    //TEST
     private ArrayList<Booking> currentARListe;
 
-    //CONSTRUCTOR
     public Controller()
     {
         currentgListe = null;
@@ -33,11 +32,11 @@ public class Controller
         gaest = null;
         currentgaeid = null;
         //TEST
-        currentARListe = null;                
+        currentARListe = null;
+        
+        
     }
 
-    
-        
     public List<Gaest> getGaesteListe()
     {
         currentgListe = facade.getGaesteListe();
@@ -66,6 +65,9 @@ public class Controller
     }
     
     
+    // ANDERS - NYT
+    
+    
     // antal lejligheder ledige i given periode.
     public int getRoomsList(String x, String y, String w) {
         currentARListe = facade.getRoomsList(x,y,w);
@@ -85,10 +87,6 @@ public class Controller
         return gaest;
     }
 
-    public void UpdateGaest(String text)
-    {
-        return;
-    }
 
     public Gaest GetGaest(int gaeid)
     {
@@ -98,11 +96,15 @@ public class Controller
         return currentgaeid;
     }
 
-    public boolean UpdateGaest(int gaeid, String fnavn, String enavn, int telnu, String mail, String vnavn, int vno, int pno, String bnavn, String land, String rbu)
+    public Gaest UpdateGaest(int gaeid, String fnavn, String enavn, int telnu, String mail, String vnavn, int vno, int pno, String bnavn, String land, String rbu)
     {
-        
+        gaest = new Gaest(gaeid, fnavn, enavn, telnu, mail, vnavn, vno, pno, bnavn, land, rbu);
         boolean status = facade.UpdateGaest(gaest);
-        return status;
+        if (!status);
+        {
+            gaest = null;
+        }
+        return gaest;
     }
 
 
