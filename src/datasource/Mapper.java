@@ -107,7 +107,7 @@ public class Mapper {
             statement = con.prepareStatement(SQLString2);
             ResultSet rs2 = statement.executeQuery();
             if (rs2.next()) {
-                b.setBooking_id(rs2.getInt(1));
+                bookingID = (rs2.getInt(1));
             }
             
             //INSERT INTO GUEST_TBL
@@ -130,7 +130,7 @@ public class Mapper {
             statement = con.prepareStatement(SQLStringGB);
 
             //INSERT INTO GUEST_BOOKING_TBL
-            statement.setInt(1, b.getBooking_id());               // BOOKING_ID
+            statement.setInt(1, bookingID);               // BOOKING_ID
             statement.setInt(2, g.getGaestid());
             rowsInserted = statement.executeUpdate();
 
@@ -144,11 +144,6 @@ public class Mapper {
             statement.setString(3, IN);               // CHECKIN
             statement.setString(4, OUT);              // CHECKOUT   
             rowsInserted = statement.executeUpdate();
-            
-            
-            System.out.println(rowsInserted);
-            System.out.println("date in: " +b.getCheckIn());
-            System.out.println("date out: "+b.getCheckUd());
             
             
             

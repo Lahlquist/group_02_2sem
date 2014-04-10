@@ -1003,7 +1003,7 @@ public class GUIMedarbejder extends javax.swing.JFrame
         String xFormat = format.format(x);
         String yFormat = format.format(y);
 
-        Gaest status = c.createNewBooking(count, jTextFieldFornavn.getText(), jTextFieldEfternavn.getText(), tlfno, jTextFieldEmail.getText(), jTextfieldVejnavn.getText(), vno, pno, jTextfieldBynavn.getText(), jTextFieldLand.getText(), jTextfieldRejsebureau.getText(), x, y);
+        Gaest status = c.createNewBooking(count, jTextFieldFornavn.getText(), jTextFieldEfternavn.getText(), tlfno, jTextFieldEmail.getText(), jTextfieldVejnavn.getText(), vno, pno, jTextfieldBynavn.getText(), jTextFieldLand.getText(), jTextfieldRejsebureau.getText(), xFormat, yFormat);
         jLabelInfo.setText("Gæst Oprettet!");
     }//GEN-LAST:event_jButtonBekræftBookingActionPerformed
 
