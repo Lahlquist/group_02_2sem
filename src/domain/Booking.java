@@ -1,5 +1,8 @@
 package domain;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 /**
  * Semesterprojekt - "Casablanca Holiday Center"
  * 2. semester 2014
@@ -12,36 +15,39 @@ package domain;
 
 public class Booking
 {
-    String booking_id;
+    int booking_id;
     int    lejlighed_id;
-    String checkIn;
-    String checkUd;
+    Date checkIn;
+    Date checkUd;
+    private List<Booking> bookingliste;
     
-    public Booking(String booking_id, int lejlighed_id, String checkIn, String checkUd)
+    public Booking(int booking_id, int lejlighed_id, Date checkIn, Date checkUd)
     {
     this.booking_id    = booking_id;
     this.lejlighed_id  = lejlighed_id;
     this.checkIn       = checkIn;
-    this.checkUd       = checkUd;    
+    this.checkUd       = checkUd;  
+    bookingliste = new ArrayList<Booking>();
     }
 
-    public String getBooking_id() {
+    public int getBooking_id() {
         return booking_id;
     }
+
 
     public int getLejlighed_id() {
         return lejlighed_id;
     }
 
-    public String getCheckIn() {
+    public Date getCheckIn() {
         return checkIn;
     }
 
-    public String getCheckUd() {
+    public Date getCheckUd() {
         return checkUd;
     }
 
-    public void setBooking_id(String booking_id) {
+    public void setBooking_id(int booking_id) {
         this.booking_id = booking_id;
     }
 
@@ -49,14 +55,17 @@ public class Booking
         this.lejlighed_id = lejlighed_id;
     }
 
-    public void setCheckIn(String checkIn) {
+    public void setCheckIn(Date checkIn) {
         this.checkIn = checkIn;
     }
 
-    public void setCheckUd(String checkUd) {
+    public void setCheckUd(Date checkUd) {
         this.checkUd = checkUd;
     }
-    
+     public void addBooking(Booking l1)
+    {
+        bookingliste.add(l1);
+    }
     
     
 }

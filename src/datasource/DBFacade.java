@@ -41,16 +41,13 @@ public class DBFacade
         return mapp.createNewBooking(g,IN,OUT);
     }
     
-    public List<Lejlighed> getLejlighedliste()
+    public List<Lejlighed> getvaerelseliste()
     {
-        return mapp.getLejlighedsliste();
+        return mapp.getvaerelseliste();
     }
     
 
-    public List<Lejlighed> getLejlighedsliste()
-    {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+
 
     public boolean tjekLogind(String brugernavn, String kode){
         return (mapp.tjekLogind(brugernavn, kode));
@@ -79,6 +76,11 @@ public class DBFacade
     public boolean SletGaest(Gaest gaest)
     {
         return mapp.SletGaest(gaest);
+    }
+
+    public List<Booking> getVaerelseliste()
+    {
+        return mapp.getVaerelseliste();
     }
 
  

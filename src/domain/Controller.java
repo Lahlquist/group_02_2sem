@@ -25,11 +25,13 @@ public class Controller
     private Gaest currentgaeid;
     //TEST
     private ArrayList<Booking> currentARListe;
+    private List<Booking> currentvListe;
 
     public Controller()
     {
         currentgListe = null;
         currentlListe = null;
+        currentvListe =null; 
         gaest = null;
         currentgaeid = null;
         //TEST
@@ -55,9 +57,9 @@ public class Controller
         return gaest;
     }
     
-    public List<Lejlighed> getLejlighedliste()
+    public List<Lejlighed> getvaerelseliste()
     {
-        currentlListe = facade.getLejlighedsliste();
+        currentlListe = facade.getvaerelseliste();
         return currentlListe;
     }
 
@@ -118,6 +120,16 @@ public class Controller
         }
         return gaest;
     }
+
+    public List<Booking> getVaerelseliste()
+    {
+        currentvListe = facade.getVaerelseliste();
+        return currentvListe;
+    }
+
+
+
+
 
 
 

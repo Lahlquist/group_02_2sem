@@ -1,5 +1,6 @@
 package datasource;
 
+import domain.Booking;
 import java.util.List;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -120,6 +121,8 @@ public class Mapper {
             statement.setString(11, g.getRejsebureau());
             rowsInserted = statement.executeUpdate();
 
+            
+            
             statement = con.prepareStatement(SQLStringGB);
 
             //INSERT INTO GUEST_BOOKING_TBL
@@ -127,6 +130,7 @@ public class Mapper {
             statement.setInt(2, g.getGaestid());
             rowsInserted = statement.executeUpdate();
 
+            
             statement = con.prepareStatement(SQLStringLB);
 
             //INSERT INTO BOOKEDE_LEJLIGHED_TBL
@@ -152,8 +156,38 @@ public class Mapper {
     
     
     //SKAL BRUGES ?
-    public List<Lejlighed> getLejlighedsliste() {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public List<Lejlighed> getvaerelseliste() {
+        
+        String SQLString =
+                " select * from LEJLIGHED_TBL";
+        PreparedStatement statement = null;
+        List<Lejlighed> vaerelseListe = new ArrayList<>();
+
+        try {
+            statement = con.prepareStatement(SQLString);
+            ResultSet rs = statement.executeQuery();
+
+            while (rs.next()) {
+                int Lid = rs.getInt("LEJLIGHED_ID");
+                String Let = rs.getString("LEJLIGHED_TYPE");
+
+                vaerelseListe.add(new Lejlighed(Lid, Let));
+            }
+        } catch (SQLException e) {
+            System.out.println("Fail in Mapper - getGæster");
+            System.out.println(e.getMessage());
+        } finally // must close statement
+        {
+            try {
+                if (statement != null) {
+                    statement.close();
+                }
+            } catch (SQLException e) {
+                System.out.println("Fail in Mapper - getGæster");
+                System.out.println(e.getMessage());
+            }
+        }
+        return vaerelseListe;
     }
 
     public boolean tjekLogind(String brugernavn, String kode) {
@@ -407,6 +441,43 @@ public class Mapper {
             System.out.println(e.getMessage());
         }
         return RowsSlettet == 1;
+    }
+
+    List<Booking> getVaerelseliste()
+    {
+        String SQLString =
+                " select * from BOOKEDE_LEJLIGHED_TBL";
+        PreparedStatement statement = null;
+        List<Booking> VaerelseListe = new ArrayList<>();
+
+        try {
+            statement = con.prepareStatement(SQLString);
+            ResultSet rs = statement.executeQuery();
+
+            while (rs.next()) {
+                int bid = rs.getInt("BOOKING_ID");
+                int lid = rs.getInt("LEJLIGHED_ID");
+                Date cid = rs.getDate("CHECK_IN_DATO");
+                Date cud = rs.getDate("CHECK_OUT_DATO");
+                
+
+                VaerelseListe.add(new Booking(bid, lid,cid, cud));
+            }
+        } catch (SQLException e) {
+            System.out.println("Fail in Mapper - getGæster");
+            System.out.println(e.getMessage());
+        } finally // must close statement
+        {
+            try {
+                if (statement != null) {
+                    statement.close();
+                }
+            } catch (SQLException e) {
+                System.out.println("Fail in Mapper - getGæster");
+                System.out.println(e.getMessage());
+            }
+        }
+        return VaerelseListe;
     }
 }
 
