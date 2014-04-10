@@ -21,13 +21,19 @@ public class Booking
     Date checkUd;
     private List<Booking> bookingliste;
     
-    public Booking(int booking_id, int lejlighed_id, Date checkIn, Date checkUd)
+    public Booking(int booking_id, int lejlighed_id, Date cid, Date cud)
     {
     this.booking_id    = booking_id;
     this.lejlighed_id  = lejlighed_id;
-    this.checkIn       = checkIn;
-    this.checkUd       = checkUd;  
+    this.checkIn       = cid;
+    this.checkUd       = cud;  
     bookingliste = new ArrayList<Booking>();
+    }
+
+    Booking(Date cid, Date cud)
+    {
+        this.checkIn = cid;
+        this.checkUd = cud;
     }
 
     public int getBooking_id() {
@@ -55,12 +61,12 @@ public class Booking
         this.lejlighed_id = lejlighed_id;
     }
 
-    public void setCheckIn(Date checkIn) {
-        this.checkIn = checkIn;
+    public void setCheckIn(Date cid) {
+        this.checkIn = cid;
     }
 
-    public void setCheckUd(Date checkUd) {
-        this.checkUd = checkUd;
+    public void setCheckUd(Date cud) {
+        this.checkUd = cud;
     }
      public void addBooking(Booking l1)
     {

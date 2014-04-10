@@ -36,9 +36,9 @@ public class DBFacade
         return mapp.getGaester();
     }
     
-    public boolean createNewBooking(Gaest g, String IN, String OUT)
+    public boolean createNewBooking(Gaest g, Booking b)
     {
-        return mapp.createNewBooking(g,IN,OUT);
+        return mapp.createNewBooking(g,b);
     }
     
     public List<Lejlighed> getvaerelseliste()

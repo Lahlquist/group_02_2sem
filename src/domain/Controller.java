@@ -23,6 +23,7 @@ public class Controller
     private List<Lejlighed> currentlListe;
     private Gaest gaest;
     private Gaest currentgaeid;
+    private Booking booking;
     //TEST
     private ArrayList<Booking> currentARListe;
     private List<Booking> currentvListe;
@@ -34,6 +35,7 @@ public class Controller
         currentvListe =null; 
         gaest = null;
         currentgaeid = null;
+        booking = null; 
         //TEST
         currentARListe = null;
         
@@ -46,10 +48,11 @@ public class Controller
         return currentgListe;
     }
 
-    public Gaest createNewBooking(int gaeid, String fnavn, String enavn, int telnu, String mail, String vnavn, int vno, int pno, String bnavn, String land, String rbu, String IN, String OUT)
+    public Gaest createNewBooking(int gaeid, String fnavn, String enavn, int telnu, String mail, String vnavn, int vno, int pno, String bnavn, String land, String rbu, Date cid, Date cud)
     {
         gaest = new Gaest(gaeid, fnavn, enavn, telnu, mail, vnavn, vno, pno, bnavn, land, rbu);
-        boolean status = facade.createNewBooking(gaest, IN, OUT);
+        booking = new Booking(cid, cud);
+        boolean status = facade.createNewBooking(gaest, booking);
         if (!status);
         {
             gaest = null;
