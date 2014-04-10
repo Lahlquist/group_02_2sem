@@ -10,7 +10,6 @@ import domain.Gaest;
 import domain.Lejlighed;
 import java.util.Date;
 
-
 /*
  * Semesterprojekt - "Casablanca Holiday Center" 2. semester 2014
  *
@@ -78,6 +77,7 @@ public class Mapper {
     
     
     public boolean createNewBooking(Gaest g, String IN, String OUT) {
+
         int rowsInserted = 0;
         
         String SQLStringGæst = "insert into GAEST_TBL values (?,?,?,?,?,?,?,?,?,?,?)";
@@ -88,7 +88,7 @@ public class Mapper {
 
         String SQLStringGB = "insert into GAEST_BOOKING_TBL values (?,?)";
 
-        String SQLStringLB = "insert into BOOKEDE_LEJLIGHED_TBL values (?,?,?,?)";
+        String SQLStringLB = "insert into BOOKEDE_LEJLIGHED_TBL values (?,?, to_date(?,'DD-MM-YYYY'), to_date(?,'DD-MM-YYYY'))";
 
         PreparedStatement statement = null;
 
@@ -130,10 +130,10 @@ public class Mapper {
             statement = con.prepareStatement(SQLStringLB);
 
             //INSERT INTO BOOKEDE_LEJLIGHED_TBL
-            statement.setInt(1, bookingID);                // BOOKING_ID (LAVE SQL QUERY?)
-            statement.setInt(2, ledig_id.get(0));   // LEJLIGHED_ID
-            statement.setDate(3, null);             // METODEN SKAL TAGE IMOD CHECK IN/OUT DATES
-            statement.setDate(4, null);             // CHECKOUT   
+            statement.setInt(1, bookingID);           // BOOKING_ID
+            statement.setInt(2, ledig_id.get(0));     // LEJLIGHED_ID
+            statement.setString(3, IN);               // CHECKIN
+            statement.setString(4, OUT);              // CHECKOUT   
             rowsInserted = statement.executeUpdate();
 
         } catch (SQLException e) {
@@ -214,7 +214,7 @@ public class Mapper {
                 + " WHERE LEJLIGHED_TYPE = '" + w + "' AND LEJLIGHED_ID"
                 + " NOT IN (select LEJLIGHED_ID FROM BOOKEDE_LEJLIGHED_TBL)";
 
-        PreparedStatement statement = null;
+        PreparedStatement statement  = null;
         PreparedStatement statement2 = null;
 
         try {
@@ -252,26 +252,7 @@ public class Mapper {
             return ledig_id;
         }
     }
-
-    
-    
-    //skal udvælge en lejlighed til currentGæst.
-    public int tildelLejlighed() {
-
-        int lejlighedsNR = ledig_id.get(0);
-
-        String SQLString = "select * from lejlighed where id = " + lejlighedsNR + "";
-
-
-        try {
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-
-        return lejlighedsNR;
-    }
-
-    
+ 
     
     boolean createNewgaest(Gaest gaest) {
         int rowsInserted = 0;
